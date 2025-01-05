@@ -25,3 +25,29 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+/\*
+Angular'chi bilishi shart bo'lgan 21 ta mavzu:
+
+1. Angular structure
+2. Component structure
+3. Component interactions
+4. Bindings, One way, two way
+5. CLI
+6. Services
+7. Pipes, Custom pipes
+8. Directives, Custom directives
+9. RxJS, Observables, operators, Subjects
+10. Routing
+11. content projection
+12. Forms, Reactive forms
+13. Dependency Injection
+14. HTTP
+15. Interceptors
+16. Route guards
+17. Lazy loading
+18. Template control flow
+19. Change detection
+20. Signals
+21. Standalone components
+
+\*/
