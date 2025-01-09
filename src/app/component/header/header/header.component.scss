@@ -1,0 +1,9 @@
+.ant-layout-header {
+  height: auto;
+  color: rgba(0, 0, 0, 0.85);
+  line-height: normal;
+  background: #fff;
+}
+.active {
+  @apply text-blue-500;
+}

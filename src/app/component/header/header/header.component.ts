@@ -1,20 +1,22 @@
-import { Component, ViewEncapsulation } from '@angular/core';
-import { ButtonModule } from 'primeng/button';
+import { Component, NgModule } from '@angular/core';
 import { NotificationService } from '../../../service/notification.service';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import { NgFor } from '@angular/common';
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [ButtonModule, RouterLink, RouterLinkActive],
+  imports: [RouterLink, RouterLinkActive, NzLayoutModule, NgFor],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
-  encapsulation: ViewEncapsulation.None,
 })
 export class HeaderComponent {
   count = 1;
-  counter() {
-    this.count++;
-  }
+  menuItems = [
+    { label: 'Home', link: '/' },
+    { label: 'About', link: '/about' },
+    { label: 'Contact', link: '/contact' },
+  ];
 
   constructor(private notificationService: NotificationService) {}
   notify(): void {

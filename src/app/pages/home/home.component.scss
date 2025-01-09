@@ -1,1 +1,14 @@
 
+.search-item {
+  display: flex;
+}
+
+.search-item-desc {
+  flex: auto;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.search-item-count {
+  flex: none;
+}
