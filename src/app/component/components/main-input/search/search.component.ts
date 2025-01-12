@@ -5,6 +5,7 @@ import { NzAutocompleteModule } from 'ng-zorro-antd/auto-complete';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzInputModule } from 'ng-zorro-antd/input';
+import { ProductCard } from '../../../../interface/interfaces';
 
 @Component({
   selector: 'app-search',
@@ -22,20 +23,13 @@ import { NzInputModule } from 'ng-zorro-antd/input';
 })
 export class SearchComponent {
   inputValue?: string;
-  options: Array<{ value: string; category: string; count: number }> = [];
+  cards: ProductCard[] = [];
+  filteredCards: ProductCard[] = [];
   onChange(e: Event): void {
-    const value = (e.target as HTMLInputElement).value;
-    this.options = new Array(this.getRandomInt(5, 15))
-      .join('.')
-      .split('.')
-      .map((_item, idx) => ({
-        value,
-        category: `${value}${idx}`,
-        count: this.getRandomInt(200, 100),
-      }));
-  }
-
-  private getRandomInt(max: number, min: number = 0): number {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+    this.filteredCards = this.cards.filter((card) =>
+      card.title
+        .toLowerCase()
+        .includes((e.target as HTMLInputElement).value.toLowerCase())
+    );
   }
 }

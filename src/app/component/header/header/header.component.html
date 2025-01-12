@@ -1,4 +1,4 @@
-<nz-header>
+<nz-header class="fixed top-0 left-0 right-0 z-50">
   <div class="container mx-auto">
     <nav class="flex justify-between items-center py-4">
       <a href="#!" class="text-2xl text-blue-950">Logo</a>
@@ -16,7 +16,11 @@
             <a routerLink="/contact" routerLinkActive="active" class="text-xl text-blue-950 font-medium">Contact</a>
           </li> -->
         </ul>
-        <div class="flex gap-2">
+        <div class="flex items-center gap-2">
+          <a nz-button nzType="link" nzSize="large" href="#!" class="mr-3">
+            <img class="w-10 h-10 object-contain object-center"
+              src="https://img.icons8.com/color/48/000000/shopping-cart.png" alt="">
+          </a>
           <a nz-button nzType="link"
             class="text-xl pt-2 pb-3 leading-none rounded hover:opacity-85 hover:text-white duration-150 px-3 bg-blue-950 text-white">Login
           </a>

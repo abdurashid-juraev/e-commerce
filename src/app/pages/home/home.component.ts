@@ -19,7 +19,6 @@ export class HomeComponent {
   ngOnInit(): void {
     this.cardService.getCards().subscribe((cards) => {
       this.cards = cards;
-      console.log(this.cards);
     });
   }
 }
