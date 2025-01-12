@@ -1,29 +1,4 @@
-<nz-layout class="flex flex-col justify-between h-screen">
-  <app-header></app-header>
-  <main class="h-full">
-    <div class="container mx-auto">
-      <h1 class="text-4xl text-blue-950 font-bold text-center py-10">About</h1>
-      <div class="flex items-center mt-10 justify-center gap-5">
+<div class="container mx-auto">
+  <h1 class="text-4xl text-blue-950 font-bold text-center py-3">Бытовая техника</h1>
 
-        <div class="">
-          <nz-button-group>
-            <button nz-button (click)="log()">DropDown</button>
-            <button nz-button nz-dropdown [nzDropdownMenu]="menu2" nzPlacement="bottomRight">
-              <span nz-icon nzType="user"></span>
-            </button>
-          </nz-button-group>
-          <nz-dropdown-menu #menu2="nzDropdownMenu">
-            <ul nz-menu>
-              <li nz-menu-item>menu2 1st menu item</li>
-              <li nz-menu-item>menu2 2nd menu item</li>
-              <li nz-menu-item>menu2 3rd menu item</li>
-            </ul>
-          </nz-dropdown-menu>
-        </div>
-        <nz-cascader [nzOptions]="nzOptions" [(ngModel)]="values" (ngModelChange)="onChanges($event)"></nz-cascader>
-        <a (click)="changeNzOptions()" class="change-options ">Change Options</a>
-      </div>
-    </div>
-  </main>
-  <app-footer></app-footer>
-</nz-layout>
+</div>

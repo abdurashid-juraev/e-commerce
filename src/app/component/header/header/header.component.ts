@@ -13,9 +13,9 @@ import { NgFor } from '@angular/common';
 export class HeaderComponent {
   count = 1;
   menuItems = [
-    { label: 'Home', link: '/' },
-    { label: 'About', link: '/about' },
-    { label: 'Contact', link: '/contact' },
+    { label: 'Главная', link: '/' },
+    { label: 'Бытовая техника', link: '/about' },
+    { label: 'Одежда', link: '/contact' },
   ];
 
   constructor(private notificationService: NotificationService) {}

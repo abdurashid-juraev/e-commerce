@@ -1,0 +1,9 @@
+<nz-card nzHoverable class="rounded-sm">
+  <h2 class="font-semibold">{{card.title}}</h2>
+  <img [src]="card.image" [alt]="card.title">
+  <div class="py-2">
+    <p class="text-base font-semibold">{{card.description}}</p>
+    <p class="text-base font-semibold">Category: {{card.category}}</p>
+    <p class="text-base font-semibold">Price: {{card.price | currency: 'USD'}}</p>
+  </div>
+</nz-card>

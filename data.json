@@ -1,0 +1,100 @@
+{
+  "cards": [
+    {
+      "id": 1,
+      "title": "Card 1",
+      "description": "This is the first card",
+      "image": "https://picsum.photos/368/200",
+      "category": "test category",
+      "price": 100
+    },
+    {
+      "id": 2,
+      "title": "Card 2",
+      "description": "This is the second card",
+      "image": "https://picsum.photos/368/200",
+      "category": "test category",
+      "price": 200
+    },
+    {
+      "id": 3,
+      "title": "Card 3",
+      "description": "This is the third card",
+      "image": "https://picsum.photos/368/200",
+      "category": "test category",
+      "price": 300
+    },
+    {
+      "id": 4,
+      "title": "Card 4",
+      "description": "This is the fourth card",
+      "image": "https://picsum.photos/368/200",
+      "category": "test category",
+      "price": 400
+    },
+    {
+      "id": 5,
+      "title": "Card 5",
+      "description": "This is the fifth card",
+      "image": "https://picsum.photos/368/200",
+      "category": "test category",
+      "price": 500
+    },
+    {
+      "id": 6,
+      "title": "Card 6",
+      "description": "This is the sixth card",
+      "image": "https://picsum.photos/368/200",
+      "category": "test category",
+      "price": 600
+    },
+    {
+      "id": 7,
+      "title": "Card 7",
+      "description": "This is the seventh card",
+      "image": "https://picsum.photos/368/200",
+      "category": "test category",
+      "price": 700
+    },
+    {
+      "id": 8,
+      "title": "Card 8",
+      "description": "This is the eighth card",
+      "image": "https://picsum.photos/368/200",
+      "category": "test category",
+      "price": 800
+    },
+    {
+      "id": 9,
+      "title": "Card 9",
+      "description": "This is the ninth card",
+      "image": "https://picsum.photos/368/200",
+      "category": "test category",
+      "price": 900
+    },
+    {
+      "id": 10,
+      "title": "Card 10",
+      "description": "This is the tenth card",
+      "image": "https://picsum.photos/368/200",
+      "category": "test category",
+      "price": 1000
+    },
+    {
+      "id": 11,
+      "title": "Card 11",
+      "description": "This is the eleventh card",
+      "image": "https://picsum.photos/368/200",
+      "category": "test category",
+      "price": 1100
+    },
+    {
+      "id": 12,
+      "title": "Card 12",
+      "description": "This is the twelfth card",
+      "image": "https://picsum.photos/368/200",
+      "category": "test category",
+      "price": 1200
+    }
+  ]
+}
