@@ -3,9 +3,11 @@
 
   <app-search></app-search>
 
-  <div nz-row [nzGutter]="[20, 20]" class="pt-7">
-    <div nz-col [nzSpan]="6" *ngFor="let card of cards">
-      <app-card [card]="card"></app-card>
+  <div nz-row [nzGutter]="[20, 20]" class="py-7">
+    @for (card of cards; track card.id ) {
+    <div nz-col [nzSpan]="6">
+      <app-card [card]="card" (click)="navigateToCard(card)"></app-card>
     </div>
+    }
   </div>
 </div>
