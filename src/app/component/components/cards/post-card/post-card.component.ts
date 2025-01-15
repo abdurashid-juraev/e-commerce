@@ -8,12 +8,15 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrl: './post-card.component.scss',
 })
 export class PostCardComponent {
-  @Input({ required: true }) post!: string;
+  @Input({ required: true }) post!: number;
 
-  @Output() dataEvent = new EventEmitter<string>();
+  // parent komponent uchun event
+  @Output() counterToParent = new EventEmitter<number>();
+  // event parametr
+  n: number = 1 + 1;
 
-  text: string = 'from Post Card';
-  sendData() {
-    this.dataEvent.emit(this.text);
+  // child tomondan jo'natadigan event
+  sendToParent() {
+    this.counterToParent.emit(this.n);
   }
 }

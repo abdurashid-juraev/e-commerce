@@ -14,12 +14,29 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent {
   cards: ProductCard[] = [];
+  filteredCards: ProductCard[] = [];
+
   constructor(private cardService: CardService, private router: Router) {}
 
   ngOnInit(): void {
     this.cardService.getCards().subscribe((cards) => {
       this.cards = cards;
+      this.filteredCards = cards;
     });
+  }
+
+  filterCard(searchText: string) {
+    const inputText = searchText.toLowerCase();
+    if (inputText === '') {
+      this.filteredCards = this.cards;
+      return;
+    } else {
+      this.filteredCards = this.cards.filter(
+        (card) =>
+          card.title.toLowerCase().includes(inputText) ||
+          card.category.toLowerCase().includes(inputText)
+      );
+    }
   }
 
   navigateToCard(card: ProductCard) {

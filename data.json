@@ -2,98 +2,98 @@
   "cards": [
     {
       "id": 1,
-      "title": "Card 1",
-      "description": "This is the first card",
+      "title": "Adventure Awaits",
+      "description": "Discover thrilling adventures with this amazing card.",
       "image": "https://picsum.photos/368/200",
-      "category": "test category",
+      "category": "Adventure",
       "price": 100
     },
     {
       "id": 2,
-      "title": "Card 2",
-      "description": "This is the second card",
+      "title": "Tech Innovations",
+      "description": "Stay updated with the latest tech trends.",
       "image": "https://picsum.photos/368/200",
-      "category": "test category",
+      "category": "Technology",
       "price": 200
     },
     {
       "id": 3,
-      "title": "Card 3",
-      "description": "This is the third card",
+      "title": "Nature's Beauty",
+      "description": "Explore the serene landscapes of nature.",
       "image": "https://picsum.photos/368/200",
-      "category": "test category",
+      "category": "Nature",
       "price": 300
     },
     {
       "id": 4,
-      "title": "Card 4",
-      "description": "This is the fourth card",
+      "title": "Health Essentials",
+      "description": "Your guide to a healthier lifestyle.",
       "image": "https://picsum.photos/368/200",
-      "category": "test category",
+      "category": "Health",
       "price": 400
     },
     {
       "id": 5,
-      "title": "Card 5",
-      "description": "This is the fifth card",
+      "title": "Cultural Discoveries",
+      "description": "Dive into the rich culture and traditions of the world.",
       "image": "https://picsum.photos/368/200",
-      "category": "test category",
+      "category": "Culture",
       "price": 500
     },
     {
       "id": 6,
-      "title": "Card 6",
-      "description": "This is the sixth card",
+      "title": "Next-Gen Gadgets",
+      "description": "Explore the future of technology with cutting-edge gadgets.",
       "image": "https://picsum.photos/368/200",
-      "category": "test category",
+      "category": "Technology",
       "price": 600
     },
     {
       "id": 7,
-      "title": "Card 7",
-      "description": "This is the seventh card",
+      "title": "Mountain Trails",
+      "description": "Challenge yourself on breathtaking mountain trails.",
       "image": "https://picsum.photos/368/200",
-      "category": "test category",
+      "category": "Adventure",
       "price": 700
     },
     {
       "id": 8,
-      "title": "Card 8",
-      "description": "This is the eighth card",
+      "title": "Wildlife Wonders",
+      "description": "Get closer to the wonders of wildlife.",
       "image": "https://picsum.photos/368/200",
-      "category": "test category",
+      "category": "Nature",
       "price": 800
     },
     {
       "id": 9,
-      "title": "Card 9",
-      "description": "This is the ninth card",
+      "title": "Fitness Goals",
+      "description": "Achieve your fitness dreams with our guides.",
       "image": "https://picsum.photos/368/200",
-      "category": "test category",
+      "category": "Health",
       "price": 900
     },
     {
       "id": 10,
-      "title": "Card 10",
-      "description": "This is the tenth card",
+      "title": "Heritage Sites",
+      "description": "Visit ancient sites and immerse in history.",
       "image": "https://picsum.photos/368/200",
-      "category": "test category",
+      "category": "Culture",
       "price": 1000
     },
     {
       "id": 11,
-      "title": "Card 11",
-      "description": "This is the eleventh card",
+      "title": "Space Exploration",
+      "description": "Unveil the secrets of the universe.",
       "image": "https://picsum.photos/368/200",
-      "category": "test category",
+      "category": "Technology",
       "price": 1100
     },
     {
       "id": 12,
-      "title": "Card 12",
-      "description": "This is the twelfth card",
+      "title": "Coastal Escapes",
+      "description": "Relax and rejuvenate at serene beaches.",
       "image": "https://picsum.photos/368/200",
-      "category": "test category",
+      "category": "Nature",
       "price": 1200
     }
   ]

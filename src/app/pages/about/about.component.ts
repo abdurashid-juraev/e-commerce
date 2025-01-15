@@ -9,11 +9,10 @@ import { PostCardComponent } from '../../component/components/cards/post-card/po
   styleUrl: './about.component.scss',
 })
 export class AboutComponent {
-  postMessage = 'Some Post Message!';
-
-  message = '';
-  recaiveMessage(data: string) {
-    this.postMessage = data;
-    alert(this.postMessage);
+  // inputga data
+  postCounter = 0;
+  // bu eventni childdan jo'natilgan output event ishlatadi
+  recaiveMessage(n: number) {
+    this.postCounter++;
   }
 }

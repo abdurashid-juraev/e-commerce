@@ -2,7 +2,7 @@
   <h1 class="text-4xl text-blue-950 mt-20  font-bold text-center py-3">Бытовая техника</h1>
 
   <div>
-    <app-post-card [post]="postMessage" (dataEvent)="recaiveMessage($event)"> </app-post-card>
+    <app-post-card [post]="postCounter" (counterToParent)="recaiveMessage($event)"> </app-post-card>
   </div>
 
 </div>

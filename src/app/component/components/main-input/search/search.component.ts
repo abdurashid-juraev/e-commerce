@@ -24,17 +24,13 @@ import { CardService } from '../../../../service/card.service';
 })
 export class SearchComponent {
   constructor(private cardService: CardService) {}
-  @Output() filteredData = new EventEmitter<string>();
+  // parentda ishlatiladigan output event
+  @Output() filterEvent = new EventEmitter<string>();
 
-  inputValue?: string;
-  cards: ProductCard[] = [];
-  filteredCards: ProductCard[] = [];
-  onChange(e: Event): void {
-    this.filteredCards = this.cards.filter((card) =>
-      card.title
-        .toLowerCase()
-        .includes((e.target as HTMLInputElement).value.toLowerCase())
-    );
-    console.log(this.filteredCards);
+  searchText: string = '';
+  inputValue = '';
+  onChange(): void {
+    this.filterEvent.emit(this.inputValue);
+    console.log('change ishladi ', this.inputValue);
   }
 }

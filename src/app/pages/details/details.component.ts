@@ -11,7 +11,7 @@ import { CardService } from './../../service/card.service';
   styleUrl: './details.component.scss',
 })
 export class DetailsComponent implements OnInit {
-  card?: ProductCard;
+  card: any;
   cards: ProductCard[] = [];
   constructor(
     private route: ActivatedRoute,
@@ -22,7 +22,7 @@ export class DetailsComponent implements OnInit {
     const cardId = this.route.snapshot.params['id'];
     this.cardservice.getCards().subscribe((cards) => {
       this.cards = cards;
-      this.card = this.cards.find((card) => card.id === cardId);
+      this.card = this.cards.find((card) => card.id === +cardId);
     });
   }
 }
