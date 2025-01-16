@@ -13,16 +13,14 @@ import { Router } from '@angular/router';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
-  cards: ProductCard[] = [];
+  cards: any;
   filteredCards: ProductCard[] = [];
 
   constructor(private cardservice: CardService, private router: Router) {}
 
-  ngOnInit(): void {
-    // this.cardService.getCards().subscribe((cards) => {
-    //   this.cards = cards;
-    //   this.filteredCards = cards;
-    // });
+  async ngOnInit(): Promise<void> {
+    this.cards = await this.cardservice.getCards()
+      this.filteredCards = this.cards
   }
 
   filterCard(searchText: string) {
@@ -32,7 +30,7 @@ export class HomeComponent {
       return;
     } else {
       this.filteredCards = this.cards.filter(
-        (card) =>
+        (card: { title: string; category: string; }) =>
           card.title.toLowerCase().includes(inputText) ||
           card.category.toLowerCase().includes(inputText)
       );

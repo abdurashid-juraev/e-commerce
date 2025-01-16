@@ -11,18 +11,16 @@ import { CardService } from './../../service/card.service';
   styleUrl: './details.component.scss',
 })
 export class DetailsComponent implements OnInit {
-  card: any;
+  card?: ProductCard;
   cards: ProductCard[] = [];
   constructor(
     private route: ActivatedRoute,
     private cardservice: CardService
   ) {}
 
-  ngOnInit(): void {
-    // const cardId = this.route.snapshot.params['id'];
-    // this.cardservice.getCards().subscribe((cards) => {
-    //   this.cards = cards;
-    //   this.card = this.cards.find((card) => card.id === cardId);
-    // });
+ async ngOnInit():Promise<void> {
+    const cardId = this.route.snapshot.params['id']
+    this.cards = await this.cardservice.getCards()
+    this.card = await this.cards.find((card) => card.id === +cardId)
   }
 }
