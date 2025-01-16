@@ -19,10 +19,10 @@ export class DetailsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    const cardId = this.route.snapshot.params['id'];
-    this.cardservice.getCards().subscribe((cards) => {
-      this.cards = cards;
-      this.card = this.cards.find((card) => card.id === +cardId);
-    });
+    // const cardId = this.route.snapshot.params['id'];
+    // this.cardservice.getCards().subscribe((cards) => {
+    //   this.cards = cards;
+    //   this.card = this.cards.find((card) => card.id === cardId);
+    // });
   }
 }

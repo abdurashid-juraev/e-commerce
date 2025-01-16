@@ -1,16 +1,16 @@
 <div class="container mx-auto pt-28">
   <a class="text-2xl py-3 px-6 bg-blue-950 text-white mb-6 inline-block rounded-md" [routerLink]="['/']"
     routerLinkActive="router-link-active">Back</a>
-  <div class="flex gap-10">
+  <div class="flex gap-10 w-2/4">
     <div class="text-2xl">
       <div class="text-red-600">Card id: {{card?.id}}</div>
-      <div>Card title: {{card?.title}}</div>
-      <div>Card description: {{card?.description}}</div>
-      <div>Card price: {{card?.price | currency: 'USD'}}</div>
-      <div>Card category: {{card?.category}}</div>
+      <div class="text-blue-600 mb-3">Card title: {{card?.title}}</div>
+      <div class="text-gray-700 text-xl">Card description: {{card?.description}}</div>
+      <div class="text-green-500 my-4">Card price: {{card?.price | currency: 'USD'}}</div>
+      <div class="text-pink-600">Card category: {{card?.category}}</div>
     </div>
-    <div>
-      <img class="w-[42rem] h-96 object-cover object-center" [src]="card?.image" [alt]="card?.title">
+    <div class="w-full  h-96">
+      <img class="w-full h-full object-cover object-center" [src]="card?.image" [alt]="card?.title">
     </div>
   </div>
 </div>

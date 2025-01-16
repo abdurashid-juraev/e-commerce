@@ -11,6 +11,5 @@ import { CurrencyPipe } from '@angular/common';
 })
 export class CardComponent {
   constructor() {}
-
   @Input() card!: ProductCard;
 }

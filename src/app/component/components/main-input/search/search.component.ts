@@ -23,12 +23,11 @@ import { CardService } from '../../../../service/card.service';
   styleUrl: './search.component.scss',
 })
 export class SearchComponent {
-  constructor(private cardService: CardService) {}
+  constructor() {}
   // parentda ishlatiladigan output event
   @Output() filterEvent = new EventEmitter<string>();
 
-  searchText: string = '';
-  inputValue = '';
+  inputValue: string = '';
   onChange(): void {
     this.filterEvent.emit(this.inputValue);
     console.log('change ishladi ', this.inputValue);

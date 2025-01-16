@@ -4,8 +4,10 @@
   <app-search (filterEvent)="filterCard($event)"></app-search>
 
   <div nz-row [nzGutter]="[20, 20]" class="py-7">
-    @for (card of filteredCards; track card.id ) {
+    @for (card of filteredCards; track card.id; ) {
+
     <div nz-col [nzSpan]="6">
+
       <app-card [card]="card" (click)="navigateToCard(card)"></app-card>
     </div>
     }

@@ -16,13 +16,13 @@ export class HomeComponent {
   cards: ProductCard[] = [];
   filteredCards: ProductCard[] = [];
 
-  constructor(private cardService: CardService, private router: Router) {}
+  constructor(private cardservice: CardService, private router: Router) {}
 
   ngOnInit(): void {
-    this.cardService.getCards().subscribe((cards) => {
-      this.cards = cards;
-      this.filteredCards = cards;
-    });
+    // this.cardService.getCards().subscribe((cards) => {
+    //   this.cards = cards;
+    //   this.filteredCards = cards;
+    // });
   }
 
   filterCard(searchText: string) {

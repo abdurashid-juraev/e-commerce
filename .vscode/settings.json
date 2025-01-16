@@ -1,0 +1,9 @@
+{
+  "diffEditor.renderMarginRevertIcon": true,
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.accessibilityPageSize": 10,
+  "editor.smoothScrolling": true,
+  "editor.stickyScroll.maxLineCount": 4,
+  "editor.formatOnSave": false,
+  "editor.minimap.sectionHeaderFontSize": 7
+}
