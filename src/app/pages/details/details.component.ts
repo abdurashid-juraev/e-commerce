@@ -18,9 +18,8 @@ export class DetailsComponent implements OnInit {
     private cardservice: CardService
   ) {}
 
- async ngOnInit():Promise<void> {
-    const cardId = this.route.snapshot.params['id']
-    this.cards = await this.cardservice.getCards()
-    this.card = await this.cards.find((card) => card.id === +cardId)
+  ngOnInit(): void {
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    this.cardservice.getCardId(id).subscribe((card) => (this.card = card));
   }
 }

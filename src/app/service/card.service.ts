@@ -6,22 +6,15 @@ import { ProductCard } from '../interface/interfaces';
   providedIn: 'root',
 })
 export class CardService {
-  url = 'http://localhost:3000/cards';
-  data: ProductCard[] = [];
+  httpUrl = 'http://localhost:3000/cards';
+  cards: ProductCard[] = [];
 
-  async getCards(): Promise<ProductCard[]> {
-    try {
-      const response = await fetch(this.url)
-      if (!response.ok) {
-        throw new Error(`HTTP Error: ${response.status}`)
-      }
-      const data: ProductCard[] = await response.json()
-      this.data = data
-      return data
-    
-    } catch (error) {
-      console.error('Failed to fetch cards', error);
-      return []
-    }
+  constructor(private http: HttpClient) {}
+  getCards(): Observable<ProductCard[]> {
+    return this.http.get<ProductCard[]>(this.httpUrl);
+  }
+
+ getCardId(id: number): Observable<ProductCard> {
+    return this.http.get<ProductCard>(`${this.httpUrl}/${id}`);
   }
 }

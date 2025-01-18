@@ -13,14 +13,16 @@ import { Router } from '@angular/router';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
-  cards: any;
+  cards: ProductCard[] = [];
   filteredCards: ProductCard[] = [];
 
   constructor(private cardservice: CardService, private router: Router) {}
 
-  async ngOnInit(): Promise<void> {
-    this.cards = await this.cardservice.getCards()
-      this.filteredCards = this.cards
+  ngOnInit(): void {
+    this.cardservice.getCards().subscribe((cards) => {
+      this.cards = cards;
+      this.filteredCards = cards;
+    });
   }
 
   filterCard(searchText: string) {
