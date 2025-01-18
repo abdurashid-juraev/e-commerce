@@ -9,10 +9,13 @@ import { RouterLink } from '@angular/router';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
 import { NzFormModule } from 'ng-zorro-antd/form';
-import { NzIconModule  } from 'ng-zorro-antd/icon';
+import { provideNzIcons as _provideNzIcons, NZ_ICONS } from 'ng-zorro-antd/icon';
+import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzInputGroupComponent, NzInputModule } from 'ng-zorro-antd/input';
-import { LockFill, UserOutline } from '@ant-design/icons-angular/icons';
+import { LockOutline, UserOutline } from '@ant-design/icons-angular/icons';
 import { NzIconService } from 'ng-zorro-antd/icon'; 
+import { IconDefinition } from '@ant-design/icons-angular';
+
 @Component({
   selector: 'app-login',
   standalone: true,
@@ -26,10 +29,8 @@ import { NzIconService } from 'ng-zorro-antd/icon';
     NzIconModule,
     NzInputGroupComponent,
   ],
-  providers: [
-    { provide: 'LockFilled', useFactory: () => LockFill },
-    provideNzIcons([UserOutline]),
-    provideNzIcons([LockFill]),
+ providers: [
+    provideNzIcons([LockOutline, UserOutline])
   ],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
@@ -41,7 +42,8 @@ export class LoginComponent implements OnInit {
     private fb: NonNullableFormBuilder,
     private iconService: NzIconService
   ) {
-    this.iconService.addIcon(LockFill);
+    this.iconService.addIcon(LockOutline);
+    this.iconService.addIcon(UserOutline)
   }
 
   ngOnInit(): void {
@@ -66,7 +68,11 @@ export class LoginComponent implements OnInit {
     }
   }
 }
-function provideNzIcons(arg0: import("@ant-design/icons-angular").IconDefinition[]): import("@angular/core").Provider {
-  throw new Error('Function not implemented.');
+
+function provideNzIcons(icons: IconDefinition[]): import("@angular/core").Provider {
+  return {
+    provide: NZ_ICONS,
+    useValue: icons
+  };
 }
 
