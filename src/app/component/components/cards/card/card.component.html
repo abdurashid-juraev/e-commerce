@@ -1,14 +1,21 @@
-<nz-card nzHoverable class="rounded-sm m-h-80 h-full">
+<nz-card nzHoverable class="rounded-sm " highlightColor='blue'>
   <h2 class="font-semibold mb-2">{{card.title}}</h2>
-  <img class="h-60 object-fill object-center" [src]="card.image" [alt]="card.title">
-  <div class="py-2">
-    <p class="text-base font-semibold line-clamp-3">{{card.description}}</p>
-    <p class="text-base font-semibold text-blue-600">Category: {{card.category}}</p>
-    <div class="flex justify-between items-center">
+
+  <img class="h-60 object-fill object-center" [src]="card.image" [alt]="card.title" (click)="navigateToCard(card)">
+  <div class="py-2 flex flex-col">
+    <div>
+      <p class="text-base font-semibold line-clamp-1">{{card.description}}</p>
+      <p class="text-base font-semibold text-blue-600">Category: {{card.category}}</p>
+    </div>
+    <div class="flex justify-between items-center h-10">
       <p class="text-base font-semibold text-green-700">Price: {{card.price | currency: 'USD'}}</p>
-      <button>
-        <img class="w-10 h-10 object-contain object-center"
+      <button type="button" (click)="addToBasket(card)">
+        @if (isSelected) {
+          <img  class="w-10 h-10 object-contain object-center"
           src="https://img.icons8.com/color/48/000000/shopping-cart.png" alt="">
+        }@else {
+          <img [src]="emptyBasket" alt="">
+        }
       </button>
     </div>
   </div>

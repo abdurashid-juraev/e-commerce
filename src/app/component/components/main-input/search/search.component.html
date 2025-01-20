@@ -1,6 +1,7 @@
 <div class="w-3/6 mx-auto">
   <nz-input-group nzSearch nzSize="large" [nzAddOnAfter]="suffixIconButton">
-    <input placeholder="input here" nz-input [(ngModel)]="inputValue" (input)="onChange()" [nzAutocomplete]="auto" />
+    <input placeholder="input here" nz-input [(ngModel)]="inputValue" 
+    (input)="onChange()" [nzAutocomplete]="auto" />
   </nz-input-group>
   <ng-template #suffixIconButton>
     <button nz-button nzType="primary" nzSize="large" nzSearch>

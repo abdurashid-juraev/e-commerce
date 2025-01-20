@@ -18,14 +18,14 @@
         </ul>
         <div class="flex items-center gap-2">
           <a nz-button nzType="link" nzSize="large" href="#!" class="mr-3">
-            <img class="w-10 h-10 object-contain object-center"
-              src="https://img.icons8.com/color/48/000000/shopping-cart.png" alt="">
+            <!-- <img class="w-10 h-10 object-contain object-center"
+              src="https://img.icons8.com/color/48/000000/shopping-cart.png" alt=""> -->
+              <img [src]="emptyBasket" alt="">
           </a>
           <a nz-button nzType="link" [routerLink]="['/login']"
             class="text-xl pt-2 pb-3 leading-none rounded hover:opacity-85 hover:text-white duration-150 px-3 bg-blue-950 text-white">Login
           </a>
-          <a nz-button nzType="link"
-            class="text-xl pt-2 pb-3 leading-none rounded hover:opacity-85 hover:text-white duration-150 px-3 bg-blue-950 text-white">Register</a>
+          
         </div>
       </div>
     </nav>

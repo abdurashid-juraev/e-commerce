@@ -12,6 +12,7 @@ import { NgFor } from '@angular/common';
 })
 export class HeaderComponent {
   count = 1;
+  emptyBasket: string = 'https://img.icons8.com/2266EE/38/shopping-cart.png';
   menuItems = [
     { label: 'Главная', link: '/' },
     { label: 'Бытовая техника', link: '/about' },
