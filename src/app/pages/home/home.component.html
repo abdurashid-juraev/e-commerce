@@ -4,12 +4,15 @@
   <app-search (filterEvent)="filterCard($event)"></app-search>
 
   <div nz-row [nzGutter]="[20, 20]" class="py-7">
-    @for (card of filteredCards; track card.id; ) {
+
+    @for (card of cards | searchFilter:inputText; track card.id; ) {
 
     <div nz-col [nzSpan]="6">
-
       <app-card [card]="card"></app-card>
     </div>
+
+    }@empty {
+      <div class="flex mx-auto mt-10 text-center text-red-600 text-3xl">Not Found</div>
     }
   </div>
 </div>
