@@ -18,3 +18,4 @@ export class CardService {
     return this.http.get<ProductCard>(`${this.httpUrl}/${id}`);
   }
 }
+                                        

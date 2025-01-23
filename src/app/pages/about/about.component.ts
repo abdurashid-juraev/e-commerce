@@ -1,10 +1,10 @@
+import { FormsModule } from '@angular/forms';
 import { Component } from '@angular/core';
 import { PostCardComponent } from '../../component/components/cards/post-card/post-card.component';
-
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [PostCardComponent],
+  imports: [PostCardComponent, FormsModule],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss',
 })

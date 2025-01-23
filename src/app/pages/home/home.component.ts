@@ -5,16 +5,18 @@ import { CardComponent } from '../../component/components/cards/card/card.compon
 import { ProductCard } from '../../interface/interfaces';
 import { CardService } from '../../service/card.service';
 import { SearchFilterPipe } from '../../shared/pipes/filter.pipe';
+import { CommonModule } from '@angular/common';
+
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [SearchComponent, NzGridModule, CardComponent, SearchFilterPipe],
+  imports: [SearchComponent, NzGridModule, CardComponent, SearchFilterPipe, CommonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
   cards: ProductCard[] = [];
-
+  odd = false;
   constructor(private cardservice: CardService) {}
 
   ngOnInit(): void {
