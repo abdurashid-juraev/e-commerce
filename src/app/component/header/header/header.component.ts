@@ -16,7 +16,8 @@ export class HeaderComponent {
   menuItems = [
     { label: 'Главная', link: '/' },
     { label: 'Бытовая техника', link: '/about' },
-    { label: 'Одежда', link: '/contact' },
+    { label: 'Admin', link: '/admin' },
+    // { label: 'Quiz', link: '/quiz' },
   ];
 
   constructor(private notificationService: NotificationService) {}

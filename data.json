@@ -293,6 +293,71 @@
       "job": "Psixologiya o'qituvchisi",
       "action": "O'quvchilar bilan maslahatlashuv"
     }
+  ],
+  
+  "quizzes": [
+    {
+      "question": "Orol davlatlari asosan qaysi xususiyatlari bilan mashhur? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati illo ratione soluta dicta fugit asperiores quos nam necessitatibus animi exercitationem illum, optio dolorum dolor ea consectetur dolore, voluptatibus, excepturi cupiditate!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati illo ratione soluta dicta fugit asperiores quos nam necessitatibus animi exercitationem illum, optio dolorum dolor ea consectetur dolore, voluptatibus, excepturi cupiditate!",
+      "options": ["Tog'li landshaft", "Savdo portlari", "Chim tuproqlar", "Katta shaharlar"],
+      "correct_answer": "Savdo portlari"
+    },
+    {
+      "question": "Yerning ekvatorial radiusi taxminan qancha? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati illo ratione soluta dicta fugit asperiores quos nam necessitatibus animi exercitationem illum, optio dolorum dolor ea consectetur dolore, voluptatibus, excepturi cupiditate!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati illo ratione soluta dicta fugit asperiores quos nam necessitatibus animi exercitationem illum, optio dolorum dolor ea consectetur dolore, voluptatibus, excepturi cupiditate!",
+      "options": ["6371 km", "6789 km", "5432 km", "7000 km"],
+      "correct_answer": "6371 km"
+    },
+    {
+      "question": "Biologiyada 'fotosintez' jarayoni nimani anglatadi? Yerning ekvatorial radiusi taxminan qancha? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati illo ratione soluta dicta fugit asperiores quos nam necessitatibus animi exercitationem illum, optio dolorum dolor ea consectetur dolore, voluptatibus, excepturi cupiditate!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati illo ratione soluta dicta fugit asperiores quos nam necessitatibus animi exercitationem illum, optio dolorum dolor ea consectetur dolore, voluptatibus, excepturi cupiditate!",
+      "options": [
+        "Hayvonlar ovqatlanishi", 
+        "O'simliklarning quyosh nuri yordamida oziq modda hosil qilishi", 
+        "Tuproqdagi mikroorganizmlar faoliyati", 
+        "Bakteriyalarning ko'payishi"
+      ],
+      "correct_answer": "O'simliklarning quyosh nuri yordamida oziq modda hosil qilishi"
+    },
+    {
+      "question": "Dunyodagi eng katta cho'l qaysi?",
+      "options": ["Gobi", "Sahara", "Kalahari", "Arktika"],
+      "correct_answer": "Sahara"
+    },
+    {
+      "question": "Kompyuter dasturlash tilining eng birinchi yaratilgani qaysi? Yerning ekvatorial radiusi taxminan qancha? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati illo ratione soluta dicta fugit asperiores quos nam necessitatibus animi exercitationem illum, optio dolorum dolor ea consectetur dolore, voluptatibus, excepturi cupiditate!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati illo ratione soluta dicta fugit asperiores quos nam necessitatibus animi exercitationem illum, optio dolorum dolor ea consectetur dolore, voluptatibus, excepturi cupiditate!",
+      "options": ["Python", "COBOL", "FORTRAN", "Java"],
+      "correct_answer": "FORTRAN"
+    },
+    {
+      "question": "Rim imperiyasining poytaxti qaysi shahar edi? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati illo ratione soluta dicta fugit asperiores quos nam necessitatibus animi exercitationem illum, optio dolorum dolor ea consectetur dolore, voluptatibus, excepturi cupiditate!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati illo ratione soluta dicta fugit asperiores quos nam necessitatibus animi exercitationem illum, optio dolorum dolor ea consectetur dolore, voluptatibus, excepturi cupiditate!",
+      "options": ["Atena", "Rim", "Kardiff", "Berlin"],
+      "correct_answer": "Rim"
+    },
+    {
+      "question": "Eng katta suv ombori qanday ataladi?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati illo ratione soluta dicta fugit asperiores quos nam necessitatibus animi exercitationem illum, optio dolorum dolor ea consectetur dolore, voluptatibus, excepturi cupiditate!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati illo ratione soluta dicta fugit asperiores quos nam necessitatibus animi exercitationem illum, optio dolorum dolor ea consectetur dolore, voluptatibus, excepturi cupiditate!",
+      "options": ["Baykal ko'li", "Kaspiy dengizi", "Tanganika ko'li", "Superior ko'li"],
+      "correct_answer": "Kaspiy dengizi"
+    },
+    {
+      "question": "Kimyo fanida 'H2O' nimani anglatadi?",
+      "options": ["Vodiy", "Suv", "Kislota", "Havo"],
+      "correct_answer": "Suv"
+    },
+    {
+      "question": "O'zbekiston Respublikasi Konstitutsiyasi qachon qabul qilingan?",
+      "options": ["1992-yil 8-dekabr", "1991-yil 1-sentabr", "1990-yil 31-avgust", "1993-yil 10-dekabr"],
+      "correct_answer": "1992-yil 8-dekabr"
+    },
+    {
+      "question": "Internetda HTML nima uchun ishlatiladi? Yerning ekvatorial radiusi taxminan qancha? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati illo ratione soluta dicta fugit asperiores quos nam necessitatibus animi exercitationem illum, optio dolorum dolor ea consectetur dolore, voluptatibus, excepturi cupiditate!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati illo ratione soluta dicta fugit asperiores quos nam necessitatibus animi exercitationem illum, optio dolorum dolor ea consectetur dolore, voluptatibus, excepturi cupiditate!",
+      "options": [
+        "Rasmlarni boshqarish uchun", 
+        "Veb-sahifalarni tuzish uchun", 
+        "Ma'lumotlar bazasini boshqarish uchun", 
+        "Tarmoq xavfsizligini ta'minlash uchun"
+      ],
+      "correct_answer": "Veb-sahifalarni tuzish uchun"
+    }
   ]
-
 }
+
+
+

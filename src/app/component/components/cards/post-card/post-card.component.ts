@@ -8,18 +8,23 @@ import {
   AfterViewInit,
   ElementRef,
   ViewChild,
+  OnInit,
+  forwardRef,
 } from '@angular/core';
 import { BehaviorSubject, fromEvent, Subject } from 'rxjs';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, Validators } from '@angular/forms';
+import { ReactiveFormsModule, FormGroup,FormControl } from '@angular/forms';
 @Component({
   selector: 'app-post-card',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule,],
   templateUrl: './post-card.component.html',
   styleUrl: './post-card.component.scss',
 })
-export class PostCardComponent implements AfterViewInit {
+
+
+export class PostCardComponent implements AfterViewInit, OnInit {
   @Input({ required: true }) post!: number;
 
   // parent komponent uchun event
@@ -68,4 +73,17 @@ export class PostCardComponent implements AfterViewInit {
     }
   }
   //---------------------------------------------------------
+
+  loginForm!: FormGroup;
+
+  ngOnInit(): void {
+    this.loginForm = new FormGroup({
+      username: new FormControl('',[Validators.required]),
+      password: new FormControl('',[Validators.required,Validators.minLength(8)])
+    });
+  }
+  submitLogin(){
+    console.warn(this.loginForm.value);
+    
+  }
 }

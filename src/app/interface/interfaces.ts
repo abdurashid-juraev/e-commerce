@@ -1,3 +1,4 @@
+import { QuizComponent } from './../pages/quiz/quiz.component';
 import { TeachersService } from './../service/teachers.service';
 export interface ProductCard {
   id: number;
@@ -19,4 +20,9 @@ export interface Teachers {
   telegram: string;
   job: string;
   action: string;
+}
+export interface Quizzes {
+  question: string;
+  options: [];
+  correct_answer:string
 }

@@ -14,7 +14,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
   cards: ProductCard[] = [];
   odd = false;
   constructor(private cardservice: CardService) {}

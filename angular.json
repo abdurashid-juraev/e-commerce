@@ -27,7 +27,7 @@
               {
                 "glob": "**/*",
                 "input": "src/assets/images",
-                "output": "assets/images" 
+                "output": "assets/images"
               },
               {
                 "glob": "**/*",
@@ -89,8 +89,8 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public",
-                "output": "public"
+                "input": "node_modules/ngx-extended-pdf-viewer/assets/",
+                "output": "/assets/"
               }
             ],
             "styles": ["src/styles.scss"],

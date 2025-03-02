@@ -1,0 +1,43 @@
+<div class="pt-24">
+  <nz-layout class="sidebar">
+    <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null" class="h-screen">
+      <div class="logo"></div>
+      <ul nz-menu nzTheme="dark" nzMode="inline">
+        <li
+          nz-submenu
+          nzTitle="Admin"
+          nzIcon="user"
+          [routerLink]="['/admin/admin-content']"
+          routerLinkActive="router-link-active"
+        ></li>
+
+        <li
+          nz-submenu
+          nzTitle="Quiz"
+          nzIcon="team"
+          [routerLink]="['quiz']"
+          routerLinkActive="router-link-active"
+        ></li>
+      </ul>
+    </nz-sider>
+    <nz-layout>
+      <nz-header>
+        <span
+          class="trigger"
+          nz-icon
+          [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
+          (click)="isCollapsed = !isCollapsed"
+        ></span>
+      </nz-header>
+      <nz-content class="h-screen overflow-y-auto">
+        <nz-breadcrumb>
+          <!-- <nz-breadcrumb-item></nz-breadcrumb-item> -->
+          <!-- <nz-breadcrumb-item></nz-breadcrumb-item> -->
+        </nz-breadcrumb>
+        <div class="inner-content">
+          <router-outlet></router-outlet>
+        </div>
+      </nz-content>
+    </nz-layout>
+  </nz-layout>
+</div>
