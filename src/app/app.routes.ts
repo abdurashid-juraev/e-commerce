@@ -18,7 +18,7 @@ export const routes: Routes = [
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'about', component: AboutComponent },
       {
-        path: 'admin',
+        path: 'contact',
         component: AdminComponent,
         children: [
           { path: 'admin-content', component: AdminContentComponent },
