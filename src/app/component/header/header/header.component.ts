@@ -14,9 +14,9 @@ export class HeaderComponent {
   count = 1;
   emptyBasket: string = 'https://img.icons8.com/2266EE/38/shopping-cart.png';
   menuItems = [
-    { label: 'Главная', link: '/' },
-    { label: 'Бытовая техника', link: '/about' },
-    { label: 'Одежда', link: '/contact' },
+    { label: 'Page 1', link: '/' },
+    { label: 'Page 2', link: '/about' },
+    { label: 'Page 3', link: '/contact' },
   ];
 
   constructor(private notificationService: NotificationService) {}
