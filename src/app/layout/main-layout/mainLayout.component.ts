@@ -10,9 +10,8 @@ import { FooterComponent } from '../../component/footer/footer/footer.component'
     RouterModule,
     RouterOutlet,
     NzLayoutModule,
-    HeaderComponent,
-    FooterComponent,
-  ],
+    HeaderComponent
+],
   templateUrl: './mainLayout.component.html',
   styleUrl: './mainLayout.component.scss',
 })

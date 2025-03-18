@@ -23,7 +23,7 @@ import { AdminContentComponent } from './admin-contents/admin-content/admin-cont
     NzLayoutModule,
     RouterOutlet,
     RouterLink,
-    RouterModule,
+    RouterModule, 
   ],
   templateUrl: './admin.component.html',
   styleUrl: './admin.component.scss',
