@@ -32,7 +32,7 @@ nz-breadcrumb {
 .inner-content {
   padding: 24px;
   background: #fff;
-  min-height: 360px;
+  // min-height: 360px;
 }
 
 nz-footer {
@@ -41,4 +41,17 @@ nz-footer {
 
 .sidebar{
   height: calc(100vh - 85px);
+}
+:host ::ng-deep .ant-menu-submenu-arrow{
+  display: none;
+}
+:host ::ng-deep .collapsible-content {
+  overflow: hidden; /* Initially, hide overflowing content */
+  max-height: 0; /* Start with a collapsed state */
+  transition: max-height 0.3s ease-out; /* Smooth transition for max-height */
+}
+
+.collapsible-content.expanded {
+  max-height: 500px; /* Adjust to the maximum expanded height */
+  /* max-height will smoothly transition from 0 to 500px over 0.3s */
 }
