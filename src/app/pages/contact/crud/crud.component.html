@@ -1,38 +1,66 @@
 <section>
   <div class="container mx-auto pt-24">
-    <a class="text-2xl py-3 px-6 bg-blue-950 text-white mb-6 inline-block rounded-md" [routerLink]="['/contact']" routerLinkActive="router-link-active"><- Back</a>
+    <a
+      class="text-2xl py-3 px-6 bg-blue-950 text-white mb-6 inline-block rounded-md"
+      [routerLink]="['/contact']"
+      routerLinkActive="router-link-active"
+      ><- Back</a
+    >
     <nz-table #basicTable [nzData]="listOfData">
       <thead>
         <tr>
-          <th>Name</th>
+          <th>Id</th>
+          <th>Full Name</th>
           <th>Age</th>
+          <th>Gender</th>
           <th>Address</th>
+          <th>Email</th>
           <th>Action</th>
         </tr>
       </thead>
       <tbody>
         @for (data of basicTable.data; track data) {
-          <tr>
-            <td>{{ data.name }}</td>
-            <td>{{ data.age }}</td>
-            <td>{{ data.address }}</td>
-            <td>
-              
-              <nz-button-group [nzSize]="size">
-                  <button nz-button nzType="primary" class="inline-flex items-center mr-1">
-                    <span nz-icon nzType="edit"></span>
-                    Edit      
-                  </button>
-                  <button nz-button nzType="primary" nzDanger="true" class="inline-flex items-center">
-                    Delete
-                    <span nz-icon nzType="delete"></span>
-                  </button>
-              </nz-button-group>
-            </td>
-          </tr>
+        <tr>
+          <td>{{ data.id }}</td>
+          <td>{{ data.fullname }}</td>
+          <td>{{ data.age }}</td>
+          <td>{{ data.gender }}</td>
+          <td>{{ data.address }}</td>
+          <td>{{ data.email }}</td>
+          <td>
+            <nz-button-group [nzSize]="size">
+              <button
+                nz-button
+                nzType="primary"
+                class="inline-flex items-center mr-1"
+                (click)="edit()"
+              >
+                <span nz-icon nzType="edit"></span>
+                Edit
+              </button>
+              <button
+                nz-button
+                nzType="primary"
+                nzDanger="true"
+                class="inline-flex items-center mr-1"
+                (click)="delete()"
+              >
+                Delete
+                <span nz-icon nzType="delete"></span>
+              </button>
+              <button
+                nz-button
+                nzType="primary"
+                class="inline-flex items-center justify-center"
+                (click)="add()"
+              >
+                <span nz-button nz-icon nzType="Plus" nzTheme="outline">✚</span>
+              </button>
+            </nz-button-group>
+          </td>
+        </tr>
         }
       </tbody>
     </nz-table>
   </div>
-  
 </section>

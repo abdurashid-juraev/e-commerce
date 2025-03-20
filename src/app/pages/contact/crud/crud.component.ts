@@ -1,9 +1,11 @@
-import { Component } from "@angular/core";
-import { RouterLink, RouterModule } from "@angular/router";
+import { Users } from './../../../interface/interfaces';
+import { Component } from '@angular/core';
+import { RouterLink, RouterModule } from '@angular/router';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzIconModule } from 'ng-zorro-antd/icon';
+import { UsersService } from '../../../service/users.service';
 interface Person {
   key: string;
   name: string;
@@ -25,37 +27,21 @@ interface Person {
   styleUrls: ['./crud.component.scss'],
 })
 export default class CrudComponent {
-  listOfData: Person[] = [
-    {
-      key: '1',
-      name: 'John Brown',
-      age: 32,
-      address: 'New York No. 1 Lake Park',
-    },
-    {
-      key: '2',
-      name: 'Jim Green',
-      age: 42,
-      address: 'London No. 1 Lake Park',
-    },
-    {
-      key: '3',
-      name: 'Joe Black',
-      age: 32,
-      address: 'Sidney No. 1 Lake Park',
-    },
-  ];
+  constructor(private $userService: UsersService) {}
+  listOfData: Users[] = [];
   size: any;
-  print() {
-    throw new Error('Method not implemented.');
-  }
+
+  // getUser({
+    // this.listOfData = this.$userService
+  // })
+
   add() {
-    throw new Error('Method not implemented.');
+    alert('Add');
   }
   edit() {
-    throw new Error('Method not implemented.');
+    alert('Edit');
   }
   delete() {
-    throw new Error('Method not implemented.');
+    alert('Delete');
   }
 }

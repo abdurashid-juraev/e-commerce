@@ -26,3 +26,12 @@ export interface Quizzes {
   options: [];
   correct_answer:string
 }
+
+export interface Users {
+  id: number;
+  fullname: string;
+  email: string;
+  age: number;
+  gender: string;
+  address: string;
+}
