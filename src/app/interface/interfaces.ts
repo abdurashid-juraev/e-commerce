@@ -35,3 +35,10 @@ export interface Users {
   gender: string;
   address: string;
 }
+export interface UserEdit{
+  full_name:string;
+  email:string;
+  ege:number;
+  gender:string;
+  address:string;
+}

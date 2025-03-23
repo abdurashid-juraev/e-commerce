@@ -294,11 +294,16 @@
       "action": "O'quvchilar bilan maslahatlashuv"
     }
   ],
-  
+
   "quizzes": [
     {
       "question": "Orol davlatlari asosan qaysi xususiyatlari bilan mashhur? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati illo ratione soluta dicta fugit asperiores quos nam necessitatibus animi exercitationem illum, optio dolorum dolor ea consectetur dolore, voluptatibus, excepturi cupiditate!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati illo ratione soluta dicta fugit asperiores quos nam necessitatibus animi exercitationem illum, optio dolorum dolor ea consectetur dolore, voluptatibus, excepturi cupiditate!",
-      "options": ["Tog'li landshaft", "Savdo portlari", "Chim tuproqlar", "Katta shaharlar"],
+      "options": [
+        "Tog'li landshaft",
+        "Savdo portlari",
+        "Chim tuproqlar",
+        "Katta shaharlar"
+      ],
       "correct_answer": "Savdo portlari"
     },
     {
@@ -309,9 +314,9 @@
     {
       "question": "Biologiyada 'fotosintez' jarayoni nimani anglatadi? Yerning ekvatorial radiusi taxminan qancha? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati illo ratione soluta dicta fugit asperiores quos nam necessitatibus animi exercitationem illum, optio dolorum dolor ea consectetur dolore, voluptatibus, excepturi cupiditate!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati illo ratione soluta dicta fugit asperiores quos nam necessitatibus animi exercitationem illum, optio dolorum dolor ea consectetur dolore, voluptatibus, excepturi cupiditate!",
       "options": [
-        "Hayvonlar ovqatlanishi", 
-        "O'simliklarning quyosh nuri yordamida oziq modda hosil qilishi", 
-        "Tuproqdagi mikroorganizmlar faoliyati", 
+        "Hayvonlar ovqatlanishi",
+        "O'simliklarning quyosh nuri yordamida oziq modda hosil qilishi",
+        "Tuproqdagi mikroorganizmlar faoliyati",
         "Bakteriyalarning ko'payishi"
       ],
       "correct_answer": "O'simliklarning quyosh nuri yordamida oziq modda hosil qilishi"
@@ -333,7 +338,12 @@
     },
     {
       "question": "Eng katta suv ombori qanday ataladi?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati illo ratione soluta dicta fugit asperiores quos nam necessitatibus animi exercitationem illum, optio dolorum dolor ea consectetur dolore, voluptatibus, excepturi cupiditate!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati illo ratione soluta dicta fugit asperiores quos nam necessitatibus animi exercitationem illum, optio dolorum dolor ea consectetur dolore, voluptatibus, excepturi cupiditate!",
-      "options": ["Baykal ko'li", "Kaspiy dengizi", "Tanganika ko'li", "Superior ko'li"],
+      "options": [
+        "Baykal ko'li",
+        "Kaspiy dengizi",
+        "Tanganika ko'li",
+        "Superior ko'li"
+      ],
       "correct_answer": "Kaspiy dengizi"
     },
     {
@@ -343,42 +353,131 @@
     },
     {
       "question": "O'zbekiston Respublikasi Konstitutsiyasi qachon qabul qilingan?",
-      "options": ["1992-yil 8-dekabr", "1991-yil 1-sentabr", "1990-yil 31-avgust", "1993-yil 10-dekabr"],
+      "options": [
+        "1992-yil 8-dekabr",
+        "1991-yil 1-sentabr",
+        "1990-yil 31-avgust",
+        "1993-yil 10-dekabr"
+      ],
       "correct_answer": "1992-yil 8-dekabr"
     },
     {
       "question": "Internetda HTML nima uchun ishlatiladi? Yerning ekvatorial radiusi taxminan qancha? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati illo ratione soluta dicta fugit asperiores quos nam necessitatibus animi exercitationem illum, optio dolorum dolor ea consectetur dolore, voluptatibus, excepturi cupiditate!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati illo ratione soluta dicta fugit asperiores quos nam necessitatibus animi exercitationem illum, optio dolorum dolor ea consectetur dolore, voluptatibus, excepturi cupiditate!",
       "options": [
-        "Rasmlarni boshqarish uchun", 
-        "Veb-sahifalarni tuzish uchun", 
-        "Ma'lumotlar bazasini boshqarish uchun", 
+        "Rasmlarni boshqarish uchun",
+        "Veb-sahifalarni tuzish uchun",
+        "Ma'lumotlar bazasini boshqarish uchun",
         "Tarmoq xavfsizligini ta'minlash uchun"
       ],
       "correct_answer": "Veb-sahifalarni tuzish uchun"
     }
   ],
- 
-  "users": 
-  [
-    { "id": 1, "full_name": "Sandy Bowkett", "email": "sbowkett0@icq.com", "gender": "Male", "address": "Sandy Bowkett Street, City, Country" },
-    { "id": 2, "full_name": "Prentice Brimman", "email": "pbrimman1@discuz.net", "gender": "Male", "address": "Prentice Brimman Street, City, Country" },
-    { "id": 3, "full_name": "Anny Ackred", "email": "aackred2@cdbaby.com", "gender": "Female", "address": "Anny Ackred Street, City, Country" },
-    { "id": 4, "full_name": "Hewett Trodd", "email": "htrodd3@shinystat.com", "gender": "Male", "address": "Hewett Trodd Street, City, Country" },
-    { "id": 5, "full_name": "Aggie Garrat", "email": "agarrat4@utexas.edu", "gender": "Female", "address": "Aggie Garrat Street, City, Country" },
-    { "id": 6, "full_name": "Daffy Stead", "email": "dstead5@japanpost.jp", "gender": "Female", "address": "Daffy Stead Street, City, Country" },
-    { "id": 7, "full_name": "Audry McGuiness", "email": "amcguiness6@dion.ne.jp", "gender": "Bigender", "address": "Audry McGuiness Street, City, Country" },
-    { "id": 8, "full_name": "Rochell Beamiss", "email": "rbeamiss7@google.com", "gender": "Female", "address": "Rochell Beamiss Street, City, Country" },
-    { "id": 9, "full_name": "Talbert Briat", "email": "tbriat8@blogs.com", "gender": "Male", "address": "Talbert Briat Street, City, Country" },
-    { "id": 10, "full_name": "Pierson Landon", "email": "plandon9@xing.com", "gender": "Male", "address": "Pierson Landon Street, City, Country" },
-    { "id": 11, "full_name": "Celeste Wybron", "email": "cwybrona@ucoz.com", "gender": "Female", "address": "Celeste Wybron Street, City, Country" },
-    { "id": 12, "full_name": "Sherye Ronchka", "email": "sronchkab@tinyurl.com", "gender": "Female", "address": "Sherye Ronchka Street, City, Country" },
-    { "id": 13, "full_name": "Tiphani Gemmell", "email": "tgemmellc@springer.com", "gender": "Female", "address": "Tiphani Gemmell Street, City, Country" },
-    { "id": 14, "full_name": "Hewet McAuslan", "email": "hmcausland@msu.edu", "gender": "Male", "address": "Hewet McAuslan Street, City, Country" },
-    { "id": 15, "full_name": "Wally Lewsey", "email": "wlewseye@upenn.edu", "gender": "Female", "address": "Wally Lewsey Street, City, Country" }
+
+  "users": [
+    {
+      "id": 1,
+      "full_name": "Sandy Bowkett",
+      "email": "sbowkett0@icq.com",
+      "gender": "Male",
+      "address": "Sandy Bowkett Street, City, Country"
+    },
+    {
+      "id": 2,
+      "full_name": "Prentice Brimman",
+      "email": "pbrimman1@discuz.net",
+      "gender": "Male",
+      "address": "Prentice Brimman Street, City, Country"
+    },
+    {
+      "id": 3,
+      "full_name": "Anny Ackred",
+      "email": "aackred2@cdbaby.com",
+      "gender": "Female",
+      "address": "Anny Ackred Street, City, Country"
+    },
+    {
+      "id": 4,
+      "full_name": "Hewett Trodd",
+      "email": "htrodd3@shinystat.com",
+      "gender": "Male",
+      "address": "Hewett Trodd Street, City, Country"
+    },
+    {
+      "id": 5,
+      "full_name": "Aggie Garrat",
+      "email": "agarrat4@utexas.edu",
+      "gender": "Female",
+      "address": "Aggie Garrat Street, City, Country"
+    },
+    {
+      "id": 6,
+      "full_name": "Daffy Stead",
+      "email": "dstead5@japanpost.jp",
+      "gender": "Female",
+      "address": "Daffy Stead Street, City, Country"
+    },
+    {
+      "id": 7,
+      "full_name": "Audry McGuiness",
+      "email": "amcguiness6@dion.ne.jp",
+      "gender": "Bigender",
+      "address": "Audry McGuiness Street, City, Country"
+    },
+    {
+      "id": 8,
+      "full_name": "Rochell Beamiss",
+      "email": "rbeamiss7@google.com",
+      "gender": "Female",
+      "address": "Rochell Beamiss Street, City, Country"
+    },
+    {
+      "id": 9,
+      "full_name": "Talbert Briat",
+      "email": "tbriat8@blogs.com",
+      "gender": "Male",
+      "address": "Talbert Briat Street, City, Country"
+    },
+    {
+      "id": 10,
+      "full_name": "Pierson Landon",
+      "email": "plandon9@xing.com",
+      "gender": "Male",
+      "address": "Pierson Landon Street, City, Country"
+    },
+    {
+      "id": 11,
+      "full_name": "Celeste Wybron",
+      "email": "cwybrona@ucoz.com",
+      "gender": "Female",
+      "address": "Celeste Wybron Street, City, Country"
+    },
+    {
+      "id": 12,
+      "full_name": "Sherye Ronchka",
+      "email": "sronchkab@tinyurl.com",
+      "gender": "Female",
+      "address": "Sherye Ronchka Street, City, Country"
+    },
+    {
+      "id": 13,
+      "full_name": "Tiphani Gemmell",
+      "email": "tgemmellc@springer.com",
+      "gender": "Female",
+      "address": "Tiphani Gemmell Street, City, Country"
+    },
+    {
+      "id": 14,
+      "full_name": "Hewet McAuslan",
+      "email": "hmcausland@msu.edu",
+      "gender": "Male",
+      "address": "Hewet McAuslan Street, City, Country"
+    },
+    {
+      "id": 15,
+      "full_name": "Wally Lewsey",
+      "email": "wlewseye@upenn.edu",
+      "gender": "Female",
+      "address": "Wally Lewsey Street, City, Country"
+    }
   ]
-
-
 }
-
-
-

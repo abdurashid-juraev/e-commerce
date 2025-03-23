@@ -35,13 +35,13 @@
                 class="inline-flex items-center justify-center mr-1"
                 (click)="add()"
               >
-                <span nz-button nz-icon nzType="Plus" nzTheme="outline">✚</span>
+                <span nz-button nz-icon  nzTheme="outline">✚</span>
               </button>
               <button
                 nz-button
                 nzType="primary"
                 class="inline-flex items-center mr-1"
-                (click)="edit()"
+                (click)="edit(data.id)"
               >
                 <span nz-icon nzType="edit"></span>
                 Edit
@@ -50,13 +50,12 @@
                 nz-button
                 nzType="primary"
                 nzDanger="true"
-                class="inline-flex items-center "
+                class="inline-flex items-center"
                 (click)="delete()"
               >
                 Delete
                 <span nz-icon nzType="delete"></span>
               </button>
-              
             </nz-button-group>
           </td>
         </tr>
@@ -65,3 +64,26 @@
     </nz-table>
   </div>
 </section>
+<div>
+  <nz-modal
+    [(nzVisible)]="isVisible"
+    nzTitle="The first Modal"
+    (nzOnCancel)="handleCancel()"
+    (nzOnOk)="edit(data.id)"
+  >
+    <ng-container *nzModalContent>
+      <div>
+        <input class="mb-2 text-xl"
+          nz-input
+          placeholder="Full Name"
+          [(ngModel)]="fullname"
+          type="text"
+        />
+        <input class="mb-2 text-xl" nz-input placeholder="Age" [(ngModel)]="age" type="number" />
+        <input class="mb-2 text-xl" nz-input placeholder="Gender" [(ngModel)]="gender" type="text" />
+        <input class="mb-2 text-xl" nz-input placeholder="Address" [(ngModel)]="address" type="text" />
+        <input class=" text-xl" nz-input placeholder="Email" [(ngModel)]="email" type="text" />
+      </div>
+    </ng-container>
+  </nz-modal>
+</div>
