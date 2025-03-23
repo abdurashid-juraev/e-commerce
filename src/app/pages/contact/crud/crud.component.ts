@@ -1,5 +1,6 @@
+import { Observable } from 'rxjs';
 import { Users } from './../../../interface/interfaces';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterModule } from '@angular/router';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { NzTableModule } from 'ng-zorro-antd/table';
@@ -26,14 +27,19 @@ interface Person {
   templateUrl: './crud.component.html',
   styleUrls: ['./crud.component.scss'],
 })
-export default class CrudComponent {
+export default class CrudComponent implements OnInit {
   constructor(private $userService: UsersService) {}
   listOfData: Users[] = [];
+  ngOnInit(): void {
+    this.$userService.getUsers().subscribe((users)=>{
+      this.listOfData = users
+      console.log(this.listOfData);
+      
+    })
+  }
   size: any;
 
-  // getUser({
-    // this.listOfData = this.$userService
-  // })
+
 
   add() {
     alert('Add');

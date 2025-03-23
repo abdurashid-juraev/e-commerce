@@ -22,13 +22,21 @@
         @for (data of basicTable.data; track data) {
         <tr>
           <td>{{ data.id }}</td>
-          <td>{{ data.fullname }}</td>
+          <td>{{ data.full_name }}</td>
           <td>{{ data.age }}</td>
           <td>{{ data.gender }}</td>
           <td>{{ data.address }}</td>
           <td>{{ data.email }}</td>
           <td>
             <nz-button-group [nzSize]="size">
+              <button
+                nz-button
+                nzType="primary"
+                class="inline-flex items-center justify-center mr-1"
+                (click)="add()"
+              >
+                <span nz-button nz-icon nzType="Plus" nzTheme="outline">✚</span>
+              </button>
               <button
                 nz-button
                 nzType="primary"
@@ -42,20 +50,13 @@
                 nz-button
                 nzType="primary"
                 nzDanger="true"
-                class="inline-flex items-center mr-1"
+                class="inline-flex items-center "
                 (click)="delete()"
               >
                 Delete
                 <span nz-icon nzType="delete"></span>
               </button>
-              <button
-                nz-button
-                nzType="primary"
-                class="inline-flex items-center justify-center"
-                (click)="add()"
-              >
-                <span nz-button nz-icon nzType="Plus" nzTheme="outline">✚</span>
-              </button>
+              
             </nz-button-group>
           </td>
         </tr>

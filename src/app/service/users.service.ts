@@ -8,9 +8,9 @@ import { Observable } from 'rxjs';
 export class UsersService {
   constructor(private http: HttpClient) {}
 
-  httpUrl = 'http://localhost://3000/users';
+ readonly httpUrl = 'http://localhost:3000/users';
 
-  getUsers(): Observable<Users> {
-    return this.http.get<Users>(this.httpUrl);
+  getUsers(): Observable<Users[]> {
+    return this.http.get<Users[]>(this.httpUrl);
   }
 }
