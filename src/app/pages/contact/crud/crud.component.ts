@@ -1,6 +1,6 @@
 import { Observable } from 'rxjs';
 import { Users } from './../../../interface/interfaces';
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, inject, OnInit } from '@angular/core';
 import { RouterLink, RouterModule } from '@angular/router';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { NzTableModule } from 'ng-zorro-antd/table';
@@ -8,8 +8,13 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { UsersService } from '../../../service/users.service';
 import { NzModalModule } from 'ng-zorro-antd/modal';
-import { FormsModule } from '@angular/forms';
-
+import {
+  FormBuilder,
+  FormGroup,
+  FormsModule,
+  Validators,
+  ReactiveFormsModule,
+} from '@angular/forms';
 import { NzInputModule } from 'ng-zorro-antd/input';
 
 @Component({
@@ -24,56 +29,77 @@ import { NzInputModule } from 'ng-zorro-antd/input';
     NzIconModule,
     NzModalModule,
     FormsModule,
+    ReactiveFormsModule,
     NzInputModule,
   ],
+
   templateUrl: './crud.component.html',
   styleUrls: ['./crud.component.scss'],
+  changeDetection:ChangeDetectionStrategy.OnPush
 })
 export default class CrudComponent implements OnInit {
   data: any;
-  constructor(private $userService: UsersService) {}
+  listItem: any;
+  isVisible = false;
+
   listOfData: Users[] = [];
-  value?: string;
-  fullname?: string;
-  age?: number;
-  gender?: string;
-  address?: string;
-  email?: string;
+  /**
+   *
+   * @param $userService
+   */
+  constructor(
+    private $userService: UsersService,
+    private cdr: ChangeDetectorRef
+  ) {}
+  fb = inject(FormBuilder);
+  /**
+   *
+   */
+  form = this.fb.nonNullable.group({
+    id: this.listOfData.length + 1,
+    full_name: ['', Validators.required],
+    age: [0, Validators.required],
+    gender: ['', Validators.required],
+    address: ['', Validators.required],
+    email: ['', Validators.required],
+  });
+  /**
+   *
+   */
   ngOnInit(): void {
-    this.$userService.getUsers().subscribe((users) => {
-      this.listOfData = users;
+    this.$userService.getUsers().subscribe((item) => {
+      this.listOfData = item;
+      console.log(item);
     });
   }
-  size: any;
+  /**
+   *
+   */
 
-  add() {
-    alert('Add');
+  add(): void {
+    const req = this.form.getRawValue();
+    this.$userService.add(req).subscribe();
   }
 
-  delete() {
-    alert('Delete');
+  delete(id: number): void {
+    this.listOfData = this.listOfData.filter((user) => user.id !== id);
   }
   //===========================================
-  isVisible = false;
-  listItem: any;
- 
 
-  
   edit(id: number): void {
-  alert(id)
+    alert(id);
   }
 
   handleOk(): void {
-   
     if (this.data && this.listItem) {
       Object.assign(this.listItem, this.data);
     }
 
-    this.isVisible = false; // Modalni yopish
+    this.isVisible = false;
   }
 
   handleCancel(): void {
     console.log('Button cancel clicked!');
-    this.isVisible = false; // Modalni yopish
+    this.isVisible = false;
   }
 }

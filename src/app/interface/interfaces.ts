@@ -35,10 +35,11 @@ export interface Users {
   gender: string;
   address: string;
 }
-export interface UserEdit{
+export interface UserPost{
+  id:number,
   full_name:string;
   email:string;
-  ege:number;
+  age:number;
   gender:string;
   address:string;
 }

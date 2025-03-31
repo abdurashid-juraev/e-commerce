@@ -6,6 +6,21 @@
       routerLinkActive="router-link-active"
       ><- Back</a
     >
+    <form [formGroup]="form" (ngSubmit)="add()" class="grid grid-cols-6 gap-3 mb-5" nz-form>
+      <input nz-input formControlName="full_name" class="text-xl" placeholder="Full name" type="text" />
+      <input nz-input class="text-xl" formControlName="age" placeholder="Age" type="text" />
+      <input nz-input class="text-xl" formControlName="gender" placeholder="Gender" type="text" />
+      <input nz-input class="text-xl" formControlName="address" placeholder="Address" type="text" />
+      <input nz-input class="text-xl" formControlName="email" placeholder="Email" type="text" />
+      <button
+        nz-button
+        nzType="primary"
+        class="inline-flex items-center  px-10 py-5 justify-center mr-1"
+        
+      >
+        <span nz-button nz-icon nzTheme="outline" class="text-xl">✚ Add</span>
+      </button>
+    </form>
     <nz-table #basicTable [nzData]="listOfData">
       <thead>
         <tr>
@@ -19,7 +34,7 @@
         </tr>
       </thead>
       <tbody>
-        @for (data of basicTable.data; track data) {
+        @for (data of basicTable.data; track data.id) {
         <tr>
           <td>{{ data.id }}</td>
           <td>{{ data.full_name }}</td>
@@ -28,15 +43,7 @@
           <td>{{ data.address }}</td>
           <td>{{ data.email }}</td>
           <td>
-            <nz-button-group [nzSize]="size">
-              <button
-                nz-button
-                nzType="primary"
-                class="inline-flex items-center justify-center mr-1"
-                (click)="add()"
-              >
-                <span nz-button nz-icon  nzTheme="outline">✚</span>
-              </button>
+            <nz-button-group>
               <button
                 nz-button
                 nzType="primary"
@@ -51,7 +58,7 @@
                 nzType="primary"
                 nzDanger="true"
                 class="inline-flex items-center"
-                (click)="delete()"
+                (click)="delete(data.id)"
               >
                 Delete
                 <span nz-icon nzType="delete"></span>
@@ -73,16 +80,36 @@
   >
     <ng-container *nzModalContent>
       <div>
-        <input class="mb-2 text-xl"
+        <input
+          class="mb-2 text-xl"
           nz-input
           placeholder="Full Name"
-          [(ngModel)]="fullname"
           type="text"
         />
-        <input class="mb-2 text-xl" nz-input placeholder="Age" [(ngModel)]="age" type="number" />
-        <input class="mb-2 text-xl" nz-input placeholder="Gender" [(ngModel)]="gender" type="text" />
-        <input class="mb-2 text-xl" nz-input placeholder="Address" [(ngModel)]="address" type="text" />
-        <input class=" text-xl" nz-input placeholder="Email" [(ngModel)]="email" type="text" />
+        <input
+          class="mb-2 text-xl"
+          nz-input
+          placeholder="Age"
+          type="number"
+        />
+        <input
+          class="mb-2 text-xl"
+          nz-input
+          placeholder="Gender"
+          type="text"
+        />
+        <input
+          class="mb-2 text-xl"
+          nz-input
+          placeholder="Address"
+          type="text"
+        />
+        <input
+          class="text-xl"
+          nz-input
+          placeholder="Email"
+          type="text"
+        />
       </div>
     </ng-container>
   </nz-modal>

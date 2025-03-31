@@ -1,4 +1,4 @@
-import { Users } from './../interface/interfaces';
+import { UserPost, Users } from './../interface/interfaces';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -8,9 +8,12 @@ import { Observable } from 'rxjs';
 export class UsersService {
   constructor(private http: HttpClient) {}
 
- readonly httpUrl = 'http://localhost:3000/users';
+  httpUrl = 'http://localhost:3000/users';
 
   getUsers(): Observable<Users[]> {
     return this.http.get<Users[]>(this.httpUrl);
+  }
+  add(model:UserPost){
+    return this.http.post<Users>(this.httpUrl,model)
   }
 }
