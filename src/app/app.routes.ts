@@ -8,7 +8,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { DetailsComponent } from './pages/details/details.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import CrudComponent from './pages/contact/crud/crud.component';
-
+import { DraftComponent } from './pages/contact/draft/draft.component';
 
 export const routes: Routes = [
   {
@@ -20,10 +20,9 @@ export const routes: Routes = [
       { path: 'card-detail/:id', component: DetailsComponent },
     ],
   },
-  { path: 'contact', component: ContactComponent,
-
-    },
-    { path:'crud',  component:  CrudComponent},
+  { path: 'contact', component: ContactComponent },
+  { path: 'crud', component: CrudComponent },
+  {path:'draft', component: DraftComponent},
   {
     path: '',
     component: AuthLayoutComponents,

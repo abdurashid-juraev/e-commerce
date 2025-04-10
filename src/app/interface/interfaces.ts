@@ -36,7 +36,7 @@ export interface Users {
   address: string;
 }
 export interface UserPost{
-  id:number,
+  id?:number,
   full_name:string;
   email:string;
   age:number;

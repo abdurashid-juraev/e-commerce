@@ -408,13 +408,6 @@
   ],
   "users": [
     {
-      "id": "1",
-      "full_name": "Sandy Bowkett",
-      "email": "sbowkett0@icq.com",
-      "gender": "Male",
-      "address": "Sandy Bowkett Street, City, Country"
-    },
-    {
       "id": "2",
       "full_name": "Prentice Brimman",
       "email": "pbrimman1@discuz.net",
@@ -478,63 +471,68 @@
       "address": "Pierson Landon Street, City, Country"
     },
     {
-      "id": "11",
-      "full_name": "Celeste Wybron",
-      "email": "cwybrona@ucoz.com",
-      "gender": "Female",
-      "address": "Celeste Wybron Street, City, Country"
-    },
-    {
-      "id": "12",
-      "full_name": "Sherye Ronchka",
-      "email": "sronchkab@tinyurl.com",
-      "gender": "Female",
-      "address": "Sherye Ronchka Street, City, Country"
-    },
-    {
-      "id": "13",
-      "full_name": "Tiphani Gemmell",
-      "email": "tgemmellc@springer.com",
-      "gender": "Female",
-      "address": "Tiphani Gemmell Street, City, Country"
-    },
-    {
-      "id": "14",
-      "full_name": "Hewet McAuslan",
-      "email": "hmcausland@msu.edu",
-      "gender": "Male",
-      "address": "Hewet McAuslan Street, City, Country"
-    },
-    {
-      "id": "15",
-      "full_name": "Wally Lewsey",
-      "email": "wlewseye@upenn.edu",
-      "gender": "Female",
-      "address": "Wally Lewsey Street, City, Country"
+      "id": 1,
+      "full_name": "",
+      "age": 0,
+      "gender": "",
+      "address": "",
+      "email": ""
     },
     {
       "id": 1,
-      "full_name": "asas",
-      "age": "011",
-      "gender": "sasas",
-      "address": "aas",
-      "email": "assa"
+      "full_name": "",
+      "age": 0,
+      "gender": "",
+      "address": "",
+      "email": ""
     },
     {
       "id": 1,
-      "full_name": "asas",
-      "age": "011",
-      "gender": "sasas",
-      "address": "aas",
-      "email": "assa"
+      "full_name": "",
+      "age": 0,
+      "gender": "",
+      "address": "",
+      "email": ""
     },
     {
       "id": 1,
-      "full_name": "asas",
-      "age": "011",
-      "gender": "sasas",
-      "address": "aas",
-      "email": "assa"
+      "full_name": "",
+      "age": 0,
+      "gender": "",
+      "address": "",
+      "email": ""
+    },
+    {
+      "id": 1,
+      "full_name": "",
+      "age": 0,
+      "gender": "",
+      "address": "",
+      "email": ""
+    },
+    {
+      "id": 0,
+      "full_name": "",
+      "age": 0,
+      "gender": "",
+      "address": "",
+      "email": ""
+    },
+    {
+      "id": -1,
+      "full_name": "",
+      "age": 0,
+      "gender": "",
+      "address": "",
+      "email": ""
+    },
+    {
+      "id": 1744046418483,
+      "full_name": "",
+      "age": 0,
+      "gender": "",
+      "address": "",
+      "email": ""
     }
   ]
 }

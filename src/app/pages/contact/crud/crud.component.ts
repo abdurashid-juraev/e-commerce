@@ -1,6 +1,12 @@
 import { Observable } from 'rxjs';
 import { Users } from './../../../interface/interfaces';
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, inject, OnInit } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+  inject,
+  OnInit,
+} from '@angular/core';
 import { RouterLink, RouterModule } from '@angular/router';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { NzTableModule } from 'ng-zorro-antd/table';
@@ -35,7 +41,7 @@ import { NzInputModule } from 'ng-zorro-antd/input';
 
   templateUrl: './crud.component.html',
   styleUrls: ['./crud.component.scss'],
-  changeDetection:ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export default class CrudComponent implements OnInit {
   data: any;
@@ -50,7 +56,12 @@ export default class CrudComponent implements OnInit {
   constructor(
     private $userService: UsersService,
     private cdr: ChangeDetectorRef
-  ) {}
+  ) {
+      this.$userService.getUsers().subscribe((item) => {
+        this.listOfData = item;
+        console.log(item);
+      });
+  }
   fb = inject(FormBuilder);
   /**
    *
@@ -67,22 +78,27 @@ export default class CrudComponent implements OnInit {
    *
    */
   ngOnInit(): void {
-    this.$userService.getUsers().subscribe((item) => {
-      this.listOfData = item;
-      console.log(item);
-    });
+  
   }
   /**
    *
    */
 
   add(): void {
-    const req = this.form.getRawValue();
-    this.$userService.add(req).subscribe();
+    console.log('add');
+
+    // const { ...userNotId} = this.form.getRawValue();
+    // this.$userService.add(userNotId).subscribe((newUser)=>{
+    //   this.listOfData = [...this.listOfData, newUser];
+    //   this.cdr.markForCheck()
+    // });
   }
 
   delete(id: number): void {
-    this.listOfData = this.listOfData.filter((user) => user.id !== id);
+    this.$userService.delete(id).subscribe(() => {
+      this.listOfData = this.listOfData.filter((user) => user.id !== id);
+      this.cdr.markForCheck();
+    });
   }
   //===========================================
 
