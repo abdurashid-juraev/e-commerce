@@ -1,5 +1,5 @@
 import { Observable } from 'rxjs';
-import { Users } from './../../../interface/interfaces';
+import { UserPost, Users } from './../../../interface/interfaces';
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
@@ -67,7 +67,7 @@ export default class CrudComponent implements OnInit {
    *
    */
   form = this.fb.nonNullable.group({
-    id: this.listOfData.length + 1,
+    // id: this.listOfData.length + 1,
     full_name: ['', Validators.required],
     age: [0, Validators.required],
     gender: ['', Validators.required],
@@ -85,20 +85,23 @@ export default class CrudComponent implements OnInit {
    */
 
   add(): void {
-    console.log('add');
-
-    // const { ...userNotId} = this.form.getRawValue();
-    // this.$userService.add(userNotId).subscribe((newUser)=>{
-    //   this.listOfData = [...this.listOfData, newUser];
-    //   this.cdr.markForCheck()
-    // });
+    const newUser:UserPost = this.form.getRawValue();
+    this.$userService.add(newUser).subscribe((createdUser:Users)=>{
+      this.listOfData.push(createdUser);
+      if (!this.form.value.full_name) {
+        alert('To\'liq kiriting' )
+        
+      }
+      
+      // this.form.reset()
+    })
   }
 
   delete(id: number): void {
     this.$userService.delete(id).subscribe(() => {
       this.listOfData = this.listOfData.filter((user) => user.id !== id);
       this.cdr.markForCheck();
-    });
+    });                               
   }
   //===========================================
 

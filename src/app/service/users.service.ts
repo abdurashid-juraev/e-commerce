@@ -21,15 +21,15 @@ export class UsersService {
    * @param model 
    * @returns 
    */
-  add(model:UserPost){
+  add(model: UserPost):Observable<Users>{
     return this.http.post<Users>(this.httpUrl,model)
   }
   /**
    * 
    * 
    */
-  delete(id:number):Observable<Users[]>{
-    return this.http.delete<Users[]>(`${this.httpUrl}/${id}`)
+  delete(id:number):Observable<void>{
+    return this.http.delete<void>(`${this.httpUrl}/${id}`)
   }
   
 }

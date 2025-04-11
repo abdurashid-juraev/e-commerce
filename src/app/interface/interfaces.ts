@@ -24,22 +24,15 @@ export interface Teachers {
 export interface Quizzes {
   question: string;
   options: [];
-  correct_answer:string
+  correct_answer: string;
 }
-
-export interface Users {
-  id: number;
+export interface UserPost {
   full_name: string;
   email: string;
   age: number;
   gender: string;
   address: string;
 }
-export interface UserPost{
-  id?:number,
-  full_name:string;
-  email:string;
-  age:number;
-  gender:string;
-  address:string;
+export interface Users extends UserPost {
+  id: number;
 }
