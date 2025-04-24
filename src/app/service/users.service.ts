@@ -10,26 +10,32 @@ export class UsersService {
 
   httpUrl = 'http://localhost:3000/users';
   /**
-   * 
-   * @returns 
+   *
+   * @returns
    */
-  getUsers(): Observable<Users[]> {
+  getUsers(id: number): Observable<Users[]> {
     return this.http.get<Users[]>(this.httpUrl);
   }
   /**
-   * 
-   * @param model 
-   * @returns 
+   *
+   * @param model
+   * @returns
    */
-  add(model: UserPost):Observable<Users>{
-    return this.http.post<Users>(this.httpUrl,model)
+  add(model: UserPost): Observable<Users[]> {
+    return this.http.post<Users[]>(this.httpUrl, model);
   }
   /**
-   * 
-   * 
+   *
+   *
    */
-  delete(id:number):Observable<void>{
-    return this.http.delete<void>(`${this.httpUrl}/${id}`)
+  delete(id: number): Observable<any> {
+    return this.http.delete(`${this.httpUrl}/${id}`);
   }
-  
+
+  edit(id: number): Observable<Users> {
+    return this.http.get<Users>(`${this.httpUrl}/${id}`);
+  }
+  update(id: number, user: UserPost): Observable<Users> {
+    return this.http.put<Users>(`${this.httpUrl}/${id}`, user);
+  }
 }

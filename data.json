@@ -99,32 +99,6 @@
   ],
   "teachers": [
     {
-      "id": "1",
-      "name": "Ali",
-      "description": "Matematika o'qituvchisi",
-      "address": "Toshkent, Yakkasaroy tumani",
-      "date": "2023-01-15",
-      "regData": "2034-01-15",
-      "phone": "+998901234567",
-      "email": "ali@example.com",
-      "telegram": "@AliTeacher",
-      "job": "Matematika o'qituvchisi",
-      "action": "Dars jadvali tuzish"
-    },
-    {
-      "id": "2",
-      "name": "Vali",
-      "description": "Fizika o'qituvchisi",
-      "address": "Samarqand, Jomboy tumani",
-      "date": "2023-03-10",
-      "regData": "2033-03-10",
-      "phone": "+998901234568",
-      "email": "vali@example.com",
-      "telegram": "@ValiTeacher",
-      "job": "Fizika o'qituvchisi",
-      "action": "Lab ishlarini nazorat qilish"
-    },
-    {
       "id": "3",
       "name": "Shahnoza",
       "description": "Ingliz tili o'qituvchisi",
@@ -136,19 +110,6 @@
       "telegram": "@ShahnozaTeacher",
       "job": "Ingliz tili o'qituvchisi",
       "action": "Qo'shimcha darslar tashkil qilish"
-    },
-    {
-      "id": "4",
-      "name": "Davron",
-      "description": "Tarix o'qituvchisi",
-      "address": "Namangan, Norin tumani",
-      "date": "2021-09-15",
-      "regData": "2031-09-15",
-      "phone": "+998901234570",
-      "email": "davron@example.com",
-      "telegram": "@DavronTeacher",
-      "job": "Tarix o'qituvchisi",
-      "action": "Kitob nashri uchun material tayyorlash"
     },
     {
       "id": "5",
@@ -240,58 +201,6 @@
       "telegram": "@FarruxTeacher",
       "job": "Jismoniy tarbiya o'qituvchisi",
       "action": "Sport musobaqalari tashkil qilish"
-    },
-    {
-      "id": "12",
-      "name": "Muzaffar",
-      "description": "Ona tili va adabiyot o'qituvchisi",
-      "address": "Jizzax, G'allaorol tumani",
-      "date": "2023-04-25",
-      "regData": "2033-04-25",
-      "phone": "+998901234578",
-      "email": "muzaffar@example.com",
-      "telegram": "@MuzaffarTeacher",
-      "job": "Ona tili va adabiyot o'qituvchisi",
-      "action": "Yozuv tanlovlarini tashkil qilish"
-    },
-    {
-      "id": "13",
-      "name": "Aziza",
-      "description": "Fransuz tili o'qituvchisi",
-      "address": "Sirdaryo, Guliston shahri",
-      "date": "2022-02-18",
-      "regData": "2032-02-18",
-      "phone": "+998901234579",
-      "email": "aziza@example.com",
-      "telegram": "@AzizaTeacher",
-      "job": "Fransuz tili o'qituvchisi",
-      "action": "Nutq ko'nikmalarini rivojlantirish"
-    },
-    {
-      "id": "14",
-      "name": "Javlon",
-      "description": "Informatika o'qituvchisi",
-      "address": "Toshkent viloyati, Chirchiq shahri",
-      "date": "2023-09-01",
-      "regData": "2033-09-01",
-      "phone": "+998901234580",
-      "email": "javlon@example.com",
-      "telegram": "@JavlonTeacher",
-      "job": "Informatika o'qituvchisi",
-      "action": "Kodni optimallashtirish"
-    },
-    {
-      "id": "15",
-      "name": "Nigora",
-      "description": "Psixologiya o'qituvchisi",
-      "address": "Surxondaryo, Termiz shahri",
-      "date": "2021-11-22",
-      "regData": "2031-11-22",
-      "phone": "+998901234581",
-      "email": "nigora@example.com",
-      "telegram": "@NigoraTeacher",
-      "job": "Psixologiya o'qituvchisi",
-      "action": "O'quvchilar bilan maslahatlashuv"
     }
   ],
   "quizzes": [
@@ -406,5 +315,22 @@
       "id": "f309"
     }
   ],
-  "users": []
+  "users": [
+    {
+      "id": "2508",
+      "full_name": "aaaaaa",
+      "age": "222222",
+      "gender": "ffffff",
+      "address": "ccccccccc",
+      "email": "cvcvcvcvcvc"
+    },
+    {
+      "full_name": "wwwwww",
+      "age": "444433333",
+      "gender": "cvcvcvc",
+      "address": "cvccccccccc",
+      "email": "rerere",
+      "id": "8f53"
+    }
+  ]
 }
