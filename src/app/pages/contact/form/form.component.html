@@ -1,0 +1,48 @@
+<div class="container mx-auto p-5">
+  <div>
+    <a class="text-2xl py-3 px-6 bg-blue-950 text-white mb-6 inline-block rounded-md" [routerLink]="['/contact']"
+      routerLinkActive="router-link-active"><- Back</a>
+  </div>
+
+  <form [formGroup]="form" class="flex flex-col gap-4 mx-auto w-1/3" (ngSubmit)="onSubmit()">
+    <div class="flex gap-4 w-full">
+      <div class="flex gap-2 w-full">
+        <input class="border border-gray-400 focus:outline-blue-500 rounded-md p-1 w-full duration-150"
+          formControlName="inputField" placeholder="Input Field" />
+      </div>
+      <div class="flex gap-4">
+        <button type="button" class="bg-blue-600 px-3 py-1.5 text-white rounded-md" (click)="add()">
+          ✚
+        </button>
+        <button type="submit" class="px-3 py-1.5 text-white rounded-md" [disabled]="!form.valid" [ngClass]="{
+            'bg-green-600 cursor-pointer': form.valid,
+            'bg-gray-400 cursor-not-allowed': !form.valid
+          }">
+          Submit
+        </button>
+      </div>
+    </div>
+
+    <!-- Telefon raqami uchun alohida input -->
+    <div>
+      <input type="tel" #phoneInput formControlName="phone" placeholder="+998 91 123 45 67"
+        class="border border-gray-400 focus:outline-blue-500 rounded-md p-1 duration-150 w-full" />
+    </div>
+
+    <!-- Qo'shimcha inputlar uchun FormArray -->
+    <div formArrayName="formArr" class="flex flex-col gap-5 w-full">
+      @for (item of formArr.controls; track $index) {
+      <div class="flex gap-4">
+        <div class="flex flex-col gap-5 w-full">
+          <input [formControlName]="$index" placeholder="Enter"
+            class="border border-gray-400 focus:outline-blue-500 p-1 duration-150 w-full rounded-md text-xl" />
+        </div>
+        <button class="bg-gray-200 hover:bg-gray-100 duration-150 px-3 py-1.5 text-white rounded-md"
+          (click)="delete()">
+          ❌
+        </button>
+      </div>
+      }
+    </div>
+  </form>
+</div>

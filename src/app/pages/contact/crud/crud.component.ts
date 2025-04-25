@@ -162,11 +162,5 @@ export default class CrudComponent implements OnInit {
     }
   }
 
-  //handleOk(): void {
-  //  if (this.data && this.listItem) {
-  //    Object.assign(this.listItem, this.data);
-  //  }
 
-  //  this.isVisible = false;
-  //}
 }
