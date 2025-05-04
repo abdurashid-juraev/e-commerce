@@ -29,7 +29,7 @@ export interface Quizzes {
 export interface UserPost {
   full_name: string;
   email: string;
-  age: number;
+  age: number | null;
   gender: string;
   address: string;
 }

@@ -6,25 +6,21 @@
       routerLinkActive="router-link-active"
       ><- Back</a
     >
-    <form [formGroup]="form" (ngSubmit)="add()" class="grid grid-cols-6 gap-3 mb-5" nz-form>
+    <form [formGroup]="form" (ngSubmit)="handleSave()" class="grid grid-cols-6 gap-3 mb-5" nz-form>
       <input nz-input formControlName="full_name" class="text-xl" placeholder="Full name" type="text" />
       <input nz-input class="text-xl" formControlName="age" placeholder="Age" type="text" />
       <input nz-input class="text-xl" formControlName="gender" placeholder="Gender" type="text" />
       <input nz-input class="text-xl" formControlName="address" placeholder="Address" type="text" />
       <input nz-input class="text-xl" formControlName="email" placeholder="Email" type="text" />
-      <button
-        nz-button
-        nzType="primary"
-        class="inline-flex items-center  px-10 py-5 justify-center mr-1"
-        
-      >
-        <span nz-button nz-icon nzTheme="outline" class="text-xl">✚ Add</span>
+      <button nz-button nzType="primary" class="inline-flex items-center px-10 py-5 justify-center mr-1"
+        >
+        <span class="text-xl">{{ listItem ? 'Save' : '✚ Add' }}</span>
       </button>
+
     </form>
     <nz-table #basicTable [nzData]="listOfData" [nzFrontPagination]="false">
       <thead>
         <tr>
-          <th>Id</th>
           <th>Full Name</th>
           <th>Age</th>
           <th>Gender</th>
@@ -36,12 +32,11 @@
       <tbody>
         @for (data of listOfData; track data.id) {
         <tr>
-          <td>{{ data.id }}</td>
-          <td>{{ data.full_name }}</td>
-          <td>{{ data.age }}</td>
-          <td>{{ data.gender }}</td>
-          <td>{{ data.address }}</td>
-          <td>{{ data.email }}</td>
+          <td>{{ data?.full_name }}</td>
+          <td>{{ data?.age }}</td>
+          <td>{{ data?.gender }}</td>
+          <td>{{ data?.address }}</td>
+          <td>{{ data?.email }}</td>
           <td>
             <nz-button-group>
               <button
@@ -71,46 +66,4 @@
     </nz-table>
   </div>
 </section>
-<div>
-  <nz-modal
-    [(nzVisible)]="isVisible"
-    nzTitle="The first Modal"
-    (nzOnCancel)="handleCancel()"
-    (nzOnOk)="edit(data.id)"
-  >
-    <ng-container *nzModalContent>
-      <div>
-        <input
-          class="mb-2 text-xl"
-          nz-input
-          placeholder="Full Name"
-          type="text"
-        />
-        <input
-          class="mb-2 text-xl"
-          nz-input
-          placeholder="Age"
-          type="number"
-        />
-        <input
-          class="mb-2 text-xl"
-          nz-input
-          placeholder="Gender"
-          type="text"
-        />
-        <input
-          class="mb-2 text-xl"
-          nz-input
-          placeholder="Address"
-          type="text"
-        />
-        <input
-          class="text-xl"
-          nz-input
-          placeholder="Email"
-          type="text"
-        />
-      </div>
-    </ng-container>
-  </nz-modal>
-</div>
+

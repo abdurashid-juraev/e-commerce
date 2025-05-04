@@ -49,6 +49,7 @@ export default class CrudComponent implements OnInit {
   isVisible = false;
 
   listOfData: Users[] = [];
+  dataSource: any;
   /**
    *
    * @param $userService
@@ -62,9 +63,8 @@ export default class CrudComponent implements OnInit {
    *
    */
   form = this.fb.nonNullable.group({
-    // id: this.listOfData.length + 1,
     full_name: ['', Validators.required],
-    age: [0, Validators.required],
+    age: [null as number | null, Validators.required],
     gender: ['', Validators.required],
     address: ['', Validators.required],
     email: ['', Validators.required],
@@ -73,9 +73,11 @@ export default class CrudComponent implements OnInit {
    *
    */
   ngOnInit(): void {
-    this.$userService.getUsers().subscribe((items)=>{
-      this.listOfData = items
-    })
+    this.$userService.getUsers(0).subscribe((item) => {
+      this.listOfData = item;
+      this.cdr.markForCheck();
+      //console.log(this.listOfData.length);
+    });
   }
   /**
    *
@@ -83,36 +85,82 @@ export default class CrudComponent implements OnInit {
 
   add(): void {
     const newUser: UserPost = this.form.getRawValue();
-    this.$userService.add(newUser).subscribe((createdUser: Users) => {
-      this.listOfData.push(createdUser);
-
-
-      // this.form.reset()
-    });
+    if (this.form.valid) {
+      this.$userService.add(newUser).subscribe({
+        next: (item) => {
+          if (Array.isArray(item)) {
+            this.listOfData = [...this.listOfData, ...item];
+          } else {
+            this.listOfData = [...this.listOfData, item];
+          }
+          this.cdr.markForCheck();
+          this.form.reset();
+          this.isVisible = false;
+        },
+        error: (err) => {
+          console.error('Error adding user:', err);
+        },
+      });
+    }
   }
 
   delete(id: number): void {
     this.$userService.delete(id).subscribe(() => {
-      this.listOfData = this.listOfData.filter((user) => user.id !== id);
+      this.listOfData = this.listOfData.filter((item) => item.id !== id);
       this.cdr.markForCheck();
     });
   }
+
   //===========================================
 
   edit(id: number): void {
-    alert(id);
+    this.$userService.edit(id).subscribe({
+      next: (user) => {
+        if (user) {
+          this.listItem = user;
+          this.form.patchValue(user);
+          window.scrollTo({ top: 0, behavior: 'smooth' }); // forma
+          this.cdr.markForCheck();
+        }
+      },
+      error: (err) => {
+        console.error(`Error fetching user with ID ${id}:`, err);
+      },
+    });
   }
 
-  handleOk(): void {
-    if (this.data && this.listItem) {
-      Object.assign(this.listItem, this.data);
+  handleSave(): void {
+    if (this.listItem) {
+      this.update();
+    } else {
+      this.add();
     }
-
-    this.isVisible = false;
   }
 
-  handleCancel(): void {
-    console.log('Button cancel clicked!');
-    this.isVisible = false;
+  update(): void {
+    if (this.form.valid && this.listItem?.id) {
+      const updatedUser: UserPost = this.form.getRawValue();
+      this.$userService.update(this.listItem.id, updatedUser).subscribe({
+        next: () => {
+          const index = this.listOfData.findIndex(
+            (u) => u.id === this.listItem.id
+          );
+          if (index !== -1) {
+            this.listOfData[index] = {
+              ...this.listOfData[index],
+              ...updatedUser,
+            };
+          }
+          this.form.reset();
+          this.listItem = null;
+          this.cdr.markForCheck();
+        },
+        error: (err) => {
+          console.error('Error updating user:', err);
+        },
+      });
+    }
   }
+
+
 }
