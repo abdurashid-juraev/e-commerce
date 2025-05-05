@@ -1,5 +1,3 @@
-import { QuizComponent } from './../pages/quiz/quiz.component';
-import { TeachersService } from './../service/teachers.service';
 export interface ProductCard {
   id: number;
   title: string;
@@ -21,11 +19,7 @@ export interface Teachers {
   job: string;
   action: string;
 }
-export interface Quizzes {
-  question: string;
-  options: [];
-  correct_answer: string;
-}
+
 export interface UserPost {
   full_name: string;
   email: string;

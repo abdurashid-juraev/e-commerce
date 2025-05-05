@@ -8,8 +8,8 @@ import { AboutComponent } from './pages/about/about.component';
 import { DetailsComponent } from './pages/details/details.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import CrudComponent from './pages/contact/crud/crud.component';
-import { DraftComponent } from './pages/contact/draft/draft.component';
 import FormComponent from './pages/contact/form/form.component';
+import RxjsCrudComponent from './pages/contact/rxjs-crud/rxjs-crud.component';
 
 export const routes: Routes = [
   {
@@ -24,7 +24,7 @@ export const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'crud', component: CrudComponent },
   {path: 'form', component: FormComponent},
-  {path:'draft', component: DraftComponent},
+  {path:'rxjsCrud', component:RxjsCrudComponent},
   {
     path: '',
     component: AuthLayoutComponents,
