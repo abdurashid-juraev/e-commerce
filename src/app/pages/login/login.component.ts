@@ -13,7 +13,7 @@ import { provideNzIcons as _provideNzIcons, NZ_ICONS } from 'ng-zorro-antd/icon'
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzInputGroupComponent, NzInputModule } from 'ng-zorro-antd/input';
 import { LockOutline, UserOutline } from '@ant-design/icons-angular/icons';
-import { NzIconService } from 'ng-zorro-antd/icon'; 
+import { NzIconService } from 'ng-zorro-antd/icon';
 import { IconDefinition } from '@ant-design/icons-angular';
 
 @Component({
@@ -25,9 +25,9 @@ import { IconDefinition } from '@ant-design/icons-angular';
     NzCheckboxModule,
     NzFormModule,
     NzInputModule,
-    RouterLink,
+    //RouterLink,
     NzIconModule,
-    NzInputGroupComponent,
+    //NzInputGroupComponent,
   ],
  providers: [
     provideNzIcons([LockOutline, UserOutline])
@@ -47,7 +47,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    
+
     this.validateForm = this.fb.group({
       username: this.fb.control('', [Validators.required]),
       password: this.fb.control('', [Validators.required]),

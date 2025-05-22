@@ -1,4 +1,3 @@
-import { TeachersService } from './../service/teachers.service';
 export interface ProductCard {
   id: number;
   title: string;
