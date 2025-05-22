@@ -1,0 +1,32 @@
+<div class="flex gap-5 flex-col">
+  <section
+    [class]="class"
+    class="w-56 h-56 flex flex-col gap-10 justify-center"
+  >
+    <div class="text-center text-red-600 text-xl">{{ title }}</div>
+    <button
+      type="button"
+      class="p-2 rounded-md hover:bg-green-600 duration-150 text-white bg-green-500"
+      (click)="counter()"
+    >
+      ok
+    </button>
+    <div>{{ digit }}</div>
+  </section>
+  <section class="flex gap-3">
+    <ng-container  [ngTemplateOutlet]="card" [ngTemplateOutletContext]="{title: 'Title-1'}" />
+    <ng-container [ngTemplateOutlet]="card" [ngTemplateOutletContext]="{title: 'Title-2'}" />
+    <ng-container [ngTemplateOutlet]="card" [ngTemplateOutletContext]="{title: 'Title-3'}" />
+    <!--<article class="w-20 h-20 text-center border border-red-600">
+      <h2>title 1</h2>
+    </article>
+    <article class="w-20 h-20 text-center border border-red-600">
+      <h2>title 2</h2>
+    </article>-->
+  </section>
+  <ng-template #card let-title="title">
+    <article class="w-20 h-20 text-center border border-red-600">
+      <h2> {{title}} </h2>
+    </article>
+  </ng-template>
+</div>

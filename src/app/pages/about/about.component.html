@@ -1,14 +1,29 @@
 <div class="container mx-auto">
-  <h1 class="text-4xl text-blue-950 mt-20 font-bold text-center py-3">
-    <!-- Бытовая техника -->
+  <h1 class="text-4xl mb-6 text-blue-950 mt-20 font-bold text-center py-3">
+    Page 2
   </h1>
 
   <div>
-    <!-- <app-post-card
-      [post]="postCounter"
-      (counterToParent)="recaiveMessage($event)"
-    >
-    
-    </app-post-card> -->
+    <!--<div class="text-4xl text-red-600 mb-5">{{title | uppercase}}</div>-->
+      <div class="text-4xl text-red-600 mb-5">{{title | slice:1:5}}</div>
+    <div class="text-4xl text-red-600 mb-5"> {{price | currency }} </div>
+    <div class="text-4xl text-red-600 mb-5"> {{price | percent }} </div>
+    <div class="text-4xl text-red-600 mb-5"> {{realTime | date:'dd-MM-yy'}} </div>
+    <div class="text-4xl text-red-600 mb-5"> {{lorem | truncate}} </div>
+    <div appTextColor class="cursor-pointer mb-5"> {{title}} </div>
+  </div>
+  <div [ngStyle]="{'color':'green', 'font-size':'18px'}">Lorem ipsum,.</div>
+  @if(false){
+   <div class="text-4xl text-red-600 mb-5">Lorem ipsum</div>
+  }@else {
+    <div class="text-4xl text-red-600 mb-5">ipsum!</div>
+  }
+</div>
+<div class="text-center text-xl my-5 text-blue-700">{{digit}}</div>
+<div class="pb-9">
+  <app-card-about [class]="'bg-blue-100 p-4'" [title]="h1" (count)="counter()" ></app-card-about>
+  <div class="flex flex-col items-center">
+    <div class="text-center text-xl my-5 text-blue-700"> {{newCounter()}} </div>
+    <button type="button"  class="p-2 rounded-md hover:bg-green-600 duration-150 text-white bg-green-500" (click)="increment()">add</button>
   </div>
 </div>
