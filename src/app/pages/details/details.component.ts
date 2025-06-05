@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { ProductCard } from './../../interface/interfaces';
-import { ActivatedRoute, RouterLink } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { CurrencyPipe } from '@angular/common';
 import { CardService } from './../../service/card.service';
 @Component({
@@ -11,15 +11,50 @@ import { CardService } from './../../service/card.service';
   styleUrl: './details.component.scss',
 })
 export class DetailsComponent implements OnInit {
-  card?: ProductCard;
-  cards: ProductCard[] = [];
-  constructor(
-    private route: ActivatedRoute,
-    private cardservice: CardService
-  ) {}
+  public card?: ProductCard;
+  public cards: ProductCard[] = [];
+
+  private cardService = inject(CardService);
+  private activatedRoute = inject(ActivatedRoute);
+  private router = inject(Router);
 
   ngOnInit(): void {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.cardservice.getCardId(id).subscribe((card) => (this.card = card));
+    this.activatedRoute.params.subscribe((param)=>{
+      this.fetchDataById(param['id'])
+    })
   }
+
+  public fetchDataById(id: number): void {
+    this.cardService.getCardId(id).subscribe((data) => (this.card = data));
+  }
+
+
+  //ngOnInit(): void {
+  //  this.activatedRoute.params.subscribe(param => {
+  //    this.fetchDataById(param['id'])
+  //  })
+  //}
+
+  //public fetchDataById(id: number): void {
+  //  this.cardService.getCardId(id).subscribe((data) => (this.card = data));
+  //}
+
+  //next(card: any) {
+  //  const nextId = Number(card.id) + 1;
+
+  //  if(nextId > 12) return;
+
+  //  this.router.navigate(['/card-detail', nextId])
+  //}
+
+  //prev(card: any) {
+  //  // code here
+  //  // get id and - 1 then navigate to prev product
+
+  //  const prevId = Number(card.id) - 1;
+
+  //  if(prevId < 1) return;
+
+  //  this.router.navigate(['/card-detail', prevId]);
+  //}
 }

@@ -1,13 +1,13 @@
 
 import { Component } from '@angular/core';
-import { RouterLink, RouterModule } from '@angular/router';
+import {  RouterModule } from '@angular/router';
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [RouterLink, RouterModule],
+  imports: [ RouterModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })
 export class ContactComponent {
-  constructor() {}
+
 }
