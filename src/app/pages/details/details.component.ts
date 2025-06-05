@@ -58,19 +58,6 @@ export class DetailsComponent implements OnInit {
   //  this.router.navigate(['/card-detail', prevId]);
   //}
     //example.com/products?search=phone
-    https: this.route.queryParams.subscribe((params) => {
-      console.log(params['search']);
-    });
 
-    this.route.url.subscribe((segments:UrlSegment[])=>{
 
-      segments.forEach(item=>{
-        console.log(item);
-
-      });
-
-    })
-    const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.cardservice.getCardId(id).subscribe((card) => (this.card = card));
-  }
 }
