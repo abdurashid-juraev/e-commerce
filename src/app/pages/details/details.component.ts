@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductCard } from './../../interface/interfaces';
-import { ActivatedRoute, RouterLink } from '@angular/router';
+import { ActivatedRoute, RouterLink, UrlSegment } from '@angular/router';
 import { CurrencyPipe } from '@angular/common';
 import { CardService } from './../../service/card.service';
 @Component({
@@ -19,6 +19,19 @@ export class DetailsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    //example.com/products?search=phone
+    https: this.route.queryParams.subscribe((params) => {
+      console.log(params['search']);
+    });
+
+    this.route.url.subscribe((segments:UrlSegment[])=>{
+
+      segments.forEach(item=>{
+        console.log(item);
+
+      });
+
+    })
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.cardservice.getCardId(id).subscribe((card) => (this.card = card));
   }
