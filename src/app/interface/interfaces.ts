@@ -19,7 +19,6 @@ export interface Teachers {
   job: string;
   action: string;
 }
-
 export interface UserPost {
   full_name: string;
   email: string;
