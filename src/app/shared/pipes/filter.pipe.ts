@@ -12,3 +12,4 @@ export class SearchFilterPipe implements PipeTransform {
     return items.filter((item) => item?.title.toLowerCase().includes(searchValue) || item?.category.toLowerCase().includes(searchValue))
   }
 }  
+            

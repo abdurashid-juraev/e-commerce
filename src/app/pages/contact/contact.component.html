@@ -1,8 +1,105 @@
 <section class="container mx-auto px-4">
   <h1 class="text-center text-3xl">Page-3</h1>
-  <article>
+  <article class="w-3/4 mx-auto">
+    <form class="pt-10 w-full" [formGroup]="SurveyForm" (ngSubmit)="onSubmit()">
+      <div class="flex items-center justify-between gap-4">
+        <div
+          class="w-1/4 flex gap-2 grow pb-1 items-center border-b border-b-slate-300"
+        >
+          <span>1.</span>
+          <input
+            formControlName="questionText"
+            type="text"
+            placeholder="Введите вопрос"
+            class="w-full text-lg focus:outline-none border-none"
+          />
+        </div>
+        <div class="flex items-center gap-2">
 
+          <button
+            type="button"
+            class="py-1 px-2 text-white rounded bg-blue-500"
+          >
+            tahrirlash
+          </button>
+          <button (click)="resetField()"
+            type="button"
+            class="py-1 px-2 rounded-md bg-red-500 text-white"
+          >
+            o'chirish
+          </button>
+        </div>
+      </div>
+
+      <div class="my-4">
+        <nz-select formControlName="selectOption">
+          <nz-option nzValue="Один выбор" nzLabel="Bitta tanlov"></nz-option>
+          <nz-option
+            nzValue="Множественный выбор"
+            nzLabel="Ko'p tanlov"
+          ></nz-option>
+        </nz-select>
+      </div>
+
+      <div [formArrayName]="'radioOptions'">
+        @for(optionGroup of radioOptions.controls; track optionGroup; let i =
+        $index){
+
+        <div
+          [formGroupName]="i"
+          class="flex justify-between gap-2 mb-4 p-2 border rounded shadow-sm"
+        >
+          <nz-radio-group
+            formControlName="optionValue"
+            class="flex grow items-center gap-2 pb-1"
+          >
+            <label
+              nz-radio
+              [nzValue]="optionGroup.get('optionValue')?.value"
+            ></label>
+            <input
+              formControlName="answerText"
+              type="text"
+              placeholder="Введите ответ"
+              class="w-full text-lg focus:outline-none border-none"
+            />
+          </nz-radio-group>
+          <div class="flex items-center gap-2">
+            <button
+              type="button"
+              class="py-1 px-2 text-white rounded bg-blue-500"
+            >
+              tahrirlash
+            </button>
+            <button
+              type="button"
+              class="py-1 px-2 rounded-md bg-red-500 text-white"
+              (click)="removeField(i)"
+            >
+              o'chirish
+            </button>
+          </div>
+        </div>
+        }
+      </div>
+
+      <div class="flex gap-2 items-start mt-4">
+        <button type="button" (click)="addField()">
+          <span
+            class="w-5 h-5 rounded bg-green-500 inline-flex justify-center items-top text-white text-lg leading-none"
+            >+</span
+          >
+        </button>
+        <div class="text-sm">Javob variantini qo'shish</div>
+      </div>
+
+      <button
+        type="submit"
+        class="mt-6 py-2 px-4 rounded bg-indigo-600 text-white"
+        [disabled]="SurveyForm.invalid"
+      >
+        Formani Yuborish
+      </button>
+    </form>
   </article>
-
-
 </section>
