@@ -12,7 +12,7 @@
       "id": "2",
       "title": "Tech Innovations",
       "description": "Stay updated with the latest tech trends.",
-      "image": "https://picsum.photos/368/200",
+      "image": "https://picsum.photos/367/200",
       "category": "Technology",
       "price": 200
     },
@@ -20,7 +20,7 @@
       "id": "3",
       "title": "Nature's Beauty",
       "description": "Explore the serene landscapes of nature.",
-      "image": "https://picsum.photos/368/200",
+      "image": "https://picsum.photos/366/200",
       "category": "Nature",
       "price": 300
     },
@@ -28,7 +28,7 @@
       "id": "4",
       "title": "Health Essentials",
       "description": "Your guide to a healthier lifestyle.",
-      "image": "https://picsum.photos/368/200",
+      "image": "https://picsum.photos/365/200",
       "category": "Health",
       "price": 400
     },
@@ -36,7 +36,7 @@
       "id": "5",
       "title": "Cultural Discoveries",
       "description": "Dive into the rich culture and traditions of the world.",
-      "image": "https://picsum.photos/368/200",
+      "image": "https://picsum.photos/364/200",
       "category": "Culture",
       "price": 500
     },

@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [SearchComponent, NzGridModule, CardComponent, SearchFilterPipe, CommonModule],
+  imports: [SearchComponent, NzGridModule, CardComponent, SearchFilterPipe, CommonModule ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })

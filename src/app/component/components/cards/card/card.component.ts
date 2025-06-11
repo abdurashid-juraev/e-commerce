@@ -1,12 +1,12 @@
 import { Component, Input, OnInit, signal } from '@angular/core';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { ProductCard } from '../../../../interface/interfaces';
-import { CurrencyPipe } from '@angular/common';
+import { CurrencyPipe, NgOptimizedImage } from '@angular/common';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-card',
   standalone: true,
-  imports: [NzCardModule, CurrencyPipe],
+  imports: [NzCardModule, CurrencyPipe, NgOptimizedImage],
   templateUrl: './card.component.html',
   styleUrl: './card.component.scss',
 })

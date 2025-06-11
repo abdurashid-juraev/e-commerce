@@ -1,7 +1,7 @@
 <nz-card nzHoverable class="rounded-sm " highlightColor='blue'>
   <h2 class="font-semibold mb-2">{{card.title}}</h2>
 
-  <img class="h-60 object-fill object-center" [src]="card.image" [alt]="card.title" (click)="navigateToCard(card)">
+  <img class="h-60 object-fill object-center" width="368" height="200" priority placeholder="./pls.png" [ngSrc]="card.image" [alt]="card.title" (click)="navigateToCard(card)">
   <div class="py-2 flex flex-col">
     <div>
       <p class="text-base font-semibold line-clamp-1">{{card.description}}</p>
