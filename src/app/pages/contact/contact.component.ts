@@ -22,9 +22,11 @@ import {NzMessageService} from 'ng-zorro-antd/message'
   styleUrl: './contact.component.scss',
 })
 export class ContactComponent implements OnInit {
-  SurveyForm!: FormGroup;
+
   private readonly formBuilder = inject(FormBuilder);
   private readonly messageService = inject(NzMessageService)
+  public SurveyForm!: FormGroup;
+
   ngOnInit(): void {
     console.log('Init....!');
     this.initForm();
@@ -42,7 +44,7 @@ export class ContactComponent implements OnInit {
 
   private createRadioOption(): FormGroup {
     return this.formBuilder.group({
-      optionValue: [''],
+      optionValue: ['',],
       answerText: [''],
     });
   }

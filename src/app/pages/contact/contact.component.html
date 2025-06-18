@@ -33,10 +33,10 @@
 
       <div class="my-4">
         <nz-select formControlName="selectOption">
-          <nz-option nzValue="Один выбор" nzLabel="Bitta tanlov"></nz-option>
+          <nz-option nzValue="Один выбор" nzLabel="Anonim"></nz-option>
           <nz-option
             nzValue="Множественный выбор"
-            nzLabel="Ko'p tanlov"
+            nzLabel="Anonim emas"
           ></nz-option>
         </nz-select>
       </div>
@@ -55,7 +55,7 @@
           >
             <label
               nz-radio
-              [nzValue]="optionGroup.get('optionValue')?.value"
+              [nzValue]="optionGroup.get('optionValue')?.value || null"
             ></label>
             <input
               formControlName="answerText"
